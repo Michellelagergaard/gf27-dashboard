@@ -1,9 +1,36 @@
 {
-  "source": "verified-snapshot",
-  "updatedAt": "2026-09-28T00:00:00Z",
+  "source": "matomo",
+  "updatedAt": "2026-09-28T10:20:57.137Z",
   "days": [
-    {"date":"2026-09-26","views":2,"visits":null,"visitors":null,"clicks":2,"section":[],"faq":[],"scroll":[]},
-    {"date":"2026-09-27","views":0,"visits":null,"visitors":null,"clicks":0,"section":[],"faq":[],"scroll":[]},
-    {"date":"2026-09-28","views":0,"visits":null,"visitors":null,"clicks":0,"section":[],"faq":[],"scroll":[]}
+    {
+      "date": "2026-09-26",
+      "views": 2,
+      "visits": 2,
+      "visitors": 2,
+      "clicks": 2,
+      "section": [],
+      "faq": [],
+      "scroll": []
+    },
+    {
+      "date": "2026-09-27",
+      "views": 0,
+      "visits": 0,
+      "visitors": 0,
+      "clicks": 0,
+      "section": [],
+      "faq": [],
+      "scroll": []
+    },
+    {
+      "date": "2026-09-28",
+      "views": 0,
+      "visits": 0,
+      "visitors": 0,
+      "clicks": 0,
+      "section": [],
+      "faq": [],
+      "scroll": []
+    }
   ]
 }
