@@ -2,7 +2,7 @@
 
 [Åbn dashboardet](https://michellelagergaard.github.io/gf27-dashboard/) · [Se GF27-siden](https://www.dp.dk/fag-og-politik/gf27-generalforsamling/)
 
-Dashboardet viser aggregeret aktivitet: sidevisninger, besøg, klik mod tilmelding, FAQ, sektioner, scroll og periodevalg. GitHub Pages udgiver indholdet i [`docs/`](docs/). Repository og dashboard er offentligt tilgængelige. Datafilen [`docs/data.json`](docs/data.json) indeholder kun aggregerede tal og hændelsesnavne.
+Dashboardet viser aggregeret aktivitet: sidevisninger, besøg, klik mod tilmelding, FAQ, sektioner, scroll og periodevalg. GitHub Pages udgiver indholdet i [`docs/`](docs/). Repository og dashboard er offentligt tilgængelige. Datafilerne [`docs/data.json`](docs/data.json) og [`docs/data.js`](docs/data.js) indeholder kun aggregerede tal og hændelsesnavne. Scriptfilen gør, at dashboardets filtre også fungerer, når browseren blokerer direkte hentning af JSON.
 
 ## Datastatus
 
@@ -10,6 +10,6 @@ Data hentes nu automatisk fra Matomo. Første vellykkede opdatering blev kørt 2
 
 ## Daglig opdatering fra Matomo
 
-Workflowet [Update GF27 dashboard data](.github/workflows/update-dashboard.yml) kører dagligt kl. 06:17 UTC (08:17 dansk sommertid, 07:17 dansk vintertid). Det henter aggregerede tal fra Matomo og opdaterer `docs/data.json`; GitHub Pages udgiver derefter den nye datafil. Det kan også [startes manuelt](https://github.com/Michellelagergaard/gf27-dashboard/actions/workflows/update-dashboard.yml) med **Run workflow**. Adgangen bruger en særskilt fortrolig OAuth-klient med kun `matomo:read`; klient-id ligger som Actions variable `MATOMO_CLIENT_ID`, og klienthemmeligheden som Actions secret `MATOMO_CLIENT_SECRET`. Hemmeligheden må ikke skrives i filer, issues eller kommentarer. Tallene opdateres én gang om dagen, ikke løbende i realtid.
+Workflowet [Update GF27 dashboard data](.github/workflows/update-dashboard.yml) kører dagligt kl. 06:17 UTC (08:17 dansk sommertid, 07:17 dansk vintertid). Det henter aggregerede tal fra Matomo og opdaterer `docs/data.json` samt `docs/data.js`; GitHub Pages udgiver derefter begge datafiler. Det kan også [startes manuelt](https://github.com/Michellelagergaard/gf27-dashboard/actions/workflows/update-dashboard.yml) med **Run workflow**. Adgangen bruger en særskilt fortrolig OAuth-klient med kun `matomo:read`; klient-id ligger som Actions variable `MATOMO_CLIENT_ID`, og klienthemmeligheden som Actions secret `MATOMO_CLIENT_SECRET`. Hemmeligheden må ikke skrives i filer, issues eller kommentarer. Tallene opdateres én gang om dagen, ikke løbende i realtid.
 
 `dashboard.html` og `worker/index.js` er kildekode til en tidligere, ejerprivat Sites-version. Den delbare GitHub-visning er `docs/index.html` med `docs/app.js` og `docs/data.json`.
