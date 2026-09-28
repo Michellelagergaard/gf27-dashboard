@@ -1,8 +1,9 @@
 import { readFile, writeFile } from 'node:fs/promises';
 
-const token = process.env.MATOMO_TOKEN_AUTH;
-if (!token) {
-  console.log('MATOMO_TOKEN_AUTH is not configured; keeping the dated sample.');
+const clientId = process.env.MATOMO_CLIENT_ID;
+const clientSecret = process.env.MATOMO_CLIENT_SECRET;
+if (!clientId || !clientSecret) {
+  console.log('Matomo OAuth client is not configured; keeping the dated sample.');
   process.exit(0);
 }
 const file = new URL('../docs/data.json', import.meta.url);
@@ -13,10 +14,17 @@ const today = new Intl.DateTimeFormat('sv-SE', {timeZone:'Europe/Copenhagen',yea
 const dates = (start,end) => {const result=[]; for(let d=new Date(start+'T12:00:00Z');d<=new Date(end+'T12:00:00Z');d.setUTCDate(d.getUTCDate()+1))result.push(d.toISOString().slice(0,10));return result};
 const rows = data => Array.isArray(data)?data:[];
 const n = value => Number(value||0);
+const oauth=await fetch('https://dp.matomo.cloud/index.php?module=OAuth2&action=token',{
+  method:'POST',headers:{'content-type':'application/x-www-form-urlencoded'},
+  body:new URLSearchParams({grant_type:'client_credentials',client_id:clientId,client_secret:clientSecret,scope:'matomo:read'})
+});
+if(!oauth.ok)throw new Error('Matomo OAuth access was denied');
+const accessToken=(await oauth.json()).access_token;
+if(!accessToken)throw new Error('Matomo OAuth access token is missing');
 
 async function report(method,date,extra={}) {
-  const body=new URLSearchParams({module:'API',method,idSite:'3',period:'day',date,format:'JSON',segment,filter_limit:'-1',...extra,token_auth:token});
-  const response=await fetch(origin,{method:'POST',headers:{'content-type':'application/x-www-form-urlencoded'},body});
+  const body=new URLSearchParams({module:'API',method,idSite:'3',period:'day',date,format:'JSON',segment,filter_limit:'-1',...extra});
+  const response=await fetch(origin,{method:'POST',headers:{'content-type':'application/x-www-form-urlencoded',authorization:'Bearer '+accessToken},body});
   if(!response.ok)throw new Error(`${method} returned HTTP ${response.status}`);
   const result=await response.json();
   if(result?.result==='error')throw new Error(`${method}: Matomo API error`);
