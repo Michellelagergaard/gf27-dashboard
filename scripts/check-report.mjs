@@ -4,7 +4,8 @@ const {default:app}=await import(pathToFileURL(process.cwd()+'/dist/server/index
 const original=globalThis.fetch;
 globalThis.fetch=async(_url,options)=>{
   const args=new URLSearchParams(options.body);
-  assert.equal(args.get('token_auth'),'synthetic');
+  assert.equal(options.headers.authorization,'Bearer synthetic-token-123456789');
+  assert.equal(args.has('token_auth'),false);
   let data;
   switch(args.get('method')){
     case 'VisitsSummary.get': data={nb_visits:2,nb_uniq_visitors:2};break;
@@ -16,11 +17,11 @@ globalThis.fetch=async(_url,options)=>{
   return new Response(JSON.stringify(data),{status:200});
 };
 try{
-  const result=await app.fetch(new Request('https://example.com/api/gf27?from=2026-09-26&to=2026-09-26'),{MATOMO_TOKEN:'synthetic'});
+  const result=await app.fetch(new Request('https://example.com/api/gf27?from=2026-09-26&to=2026-09-26',{headers:{authorization:'Bearer synthetic-token-123456789'}}),{});
   const body=await result.json();
   assert.equal(result.status,200);
   assert.deepEqual([body.visits,body.visitors,body.views,body.clicks,body.daily[0].clicks],[2,2,2,2,2]);
   const noToken=await app.fetch(new Request('https://example.com/api/gf27?from=2026-09-26&to=2026-09-26'),{});
-  assert.equal(noToken.status,503);
-  console.log('Report parsing and missing-credential state verified');
+  assert.equal(noToken.status,401);
+  console.log('Report parsing and OAuth credential gate verified');
 }finally{globalThis.fetch=original}
