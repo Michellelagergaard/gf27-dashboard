@@ -34,32 +34,34 @@ async function report(method,date,extra={}) {
   return result;
 }
 async function oneDay(date) {
-  if(date===today){
-    const [site,unfilteredPages,unfilteredCategories]=await Promise.all([
-      report('VisitsSummary.get',date,{segment:''}),
-      report('Actions.getPageUrls',date,{segment:'',flat:'1',filter_pattern:'gf27-generalforsamling'}),
-      report('Events.getCategory',date,{segment:''})
-    ]);
-    const matched=rows(unfilteredPages).filter(row=>String(row.label||'').toLowerCase().includes('gf27-generalforsamling'));
-    const category=rows(unfilteredCategories).find(row=>row.label==='GF27');
-    const eventActions=category?.idsubdatatable?rows(await report('Events.getActionFromCategoryId',date,{segment:'',idSubtable:String(category.idsubdatatable)})):[];
-    console.log('GF27 diagnostic',JSON.stringify({date,siteVisits:n(site.nb_visits),pageRows:matched.map(row=>({views:n(row.nb_hits),visits:n(row.nb_visits)})),gf27Events:n(category?.nb_events),actions:eventActions.map(row=>({action:row.label,count:n(row.nb_events),hasSubtable:Boolean(row.idsubdatatable)}))}));
-  }
   const [visits,pages,categories]=await Promise.all([
     report('VisitsSummary.get',date),
-    report('Actions.getPageUrls',date,{flat:'1',filter_pattern:'gf27-generalforsamling'}),
-    date>=eventLaunch?report('Events.getCategory',date):Promise.resolve([])
+    report('Actions.getPageUrls',date,{segment:'',flat:'1',filter_pattern:'gf27-generalforsamling'}),
+    date>=eventLaunch?report('Events.getCategory',date,{segment:''}):Promise.resolve([])
   ]);
+  const pageRows=rows(pages).filter(row=>String(row.label||'').toLowerCase().includes('gf27-generalforsamling'));
   const gf=rows(categories).find(row=>row.label==='GF27');
-  const actions=gf?.idsubdatatable?rows(await report('Events.getActionFromCategoryId',date,{idSubtable:String(gf.idsubdatatable)})):[];
+  const actions=gf?.idsubdatatable?rows(await report('Events.getActionFromCategoryId',date,{segment:'',idSubtable:String(gf.idsubdatatable)})):[];
   const detail={};
-  for(const name of ['Section navigation','FAQ open','Scroll depth']){
+  const fallbackLabels={
+    'Section navigation':'Sektionsklik (uden sektionsnavn)',
+    'FAQ open':'FAQ-åbninger (uden spørgsmålsnavn)',
+    'Scroll depth':'Scrollhændelser (uden dybde)'
+  };
+  for(const name of Object.keys(fallbackLabels)){
     const action=actions.find(row=>row.label===name);
-    detail[name]=action?.idsubdatatable?rows(await report('Events.getNameFromActionId',date,{idSubtable:String(action.idsubdatatable)})).map(row=>({label:String(row.label||''),count:n(row.nb_events)})):[];
+    if(action?.idsubdatatable){
+      detail[name]=rows(await report('Events.getNameFromActionId',date,{segment:'',idSubtable:String(action.idsubdatatable)}))
+        .map(row=>({label:String(row.label||''),count:n(row.nb_events)}));
+    }else{
+      detail[name]=n(action?.nb_events)>0?[{label:fallbackLabels[name],count:n(action.nb_events)}]:[];
+    }
   }
+  const pageVisits=pageRows.reduce((sum,row)=>sum+n(row.nb_visits),0);
+  const pageVisitors=pageRows.reduce((sum,row)=>sum+n(row.nb_uniq_visitors),0);
   return {
-    date,views:rows(pages).filter(row=>String(row.label||'').toLowerCase().includes('gf27-generalforsamling')).reduce((sum,row)=>sum+n(row.nb_hits),0),
-    visits:n(visits.nb_visits),visitors:n(visits.nb_uniq_visitors),
+    date,views:pageRows.reduce((sum,row)=>sum+n(row.nb_hits),0),
+    visits:n(visits.nb_visits)||pageVisits,visitors:n(visits.nb_uniq_visitors)||pageVisitors,
     clicks:date>=eventLaunch?actions.filter(row=>row.label==='Registration click').reduce((sum,row)=>sum+n(row.nb_events),0):null,
     section:date>=eventLaunch?detail['Section navigation']:null,faq:date>=eventLaunch?detail['FAQ open']:null,scroll:date>=eventLaunch?detail['Scroll depth']:null
   };
@@ -70,12 +72,13 @@ try{previous=JSON.parse(await readFile(file,'utf8'))}catch{}
 const existing=new Map((previous.source==='matomo'?previous.days:[]).map(day=>[day.date,day]));
 const all=dates(launch,today).filter(date=>date!==testDate);
 const refresh=new Set(all.slice(-2));
+if(previous.extractorVersion!==2)refresh.add(eventLaunch);
 for(const date of all){
   if(!existing.has(date)||refresh.has(date)){
     existing.set(date,await oneDay(date));
     console.log(`Updated aggregate Matomo report for ${date}`);
   }
 }
-const result={source:'matomo',updatedAt:new Date().toISOString(),days:all.map(date=>existing.get(date))};
+const result={source:'matomo',extractorVersion:2,updatedAt:new Date().toISOString(),days:all.map(date=>existing.get(date))};
 await writeFile(file,JSON.stringify(result,null,2)+'\n');
 await writeFile(scriptFile,'window.GF27_DATA = '+JSON.stringify(result)+';\n');
