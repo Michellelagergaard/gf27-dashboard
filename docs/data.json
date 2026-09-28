@@ -1,0 +1,9 @@
+{
+  "source": "verified-snapshot",
+  "updatedAt": "2026-09-28T00:00:00Z",
+  "days": [
+    {"date":"2026-09-26","views":2,"visits":null,"visitors":null,"clicks":2,"section":[],"faq":[],"scroll":[]},
+    {"date":"2026-09-27","views":0,"visits":null,"visitors":null,"clicks":0,"section":[],"faq":[],"scroll":[]},
+    {"date":"2026-09-28","views":0,"visits":null,"visitors":null,"clicks":0,"section":[],"faq":[],"scroll":[]}
+  ]
+}
