@@ -6,10 +6,10 @@ Dashboardet viser aggregeret aktivitet: sidevisninger, besøg, klik mod tilmeldi
 
 ## Datastatus
 
-Det nuværende datagrundlag er et kontrolleret udtræk fra 26.–28. september 2026. Kun tre dage er tilgængelige; derfor viser 7 dage, 30 dage og siden start endnu de samme tal. Det står også på dashboardet. Klik mod tilmelding betyder ikke gennemført tilmelding. Opsætningstesten 25. september er udeladt.
+Data hentes nu automatisk fra Matomo. Første vellykkede opdatering blev kørt 28. september 2026, og dashboardet viser opdateringstidspunktet. Måleperioden begynder 26. september 2026; opsætningstesten dagen før er udeladt. Med kun tre dages data viser 7 dage, 30 dage og siden start endnu de samme tal. Vælg datoer for at sammenligne delperioder. Klik mod tilmelding betyder ikke gennemført tilmelding.
 
 ## Daglig opdatering fra Matomo
 
-Workflowet [Update GF27 dashboard data](.github/workflows/update-dashboard.yml) er klar til at opdatere `docs/data.json` dagligt. Der er oprettet en særskilt fortrolig OAuth-klient i Matomo med kun `matomo:read` og client credentials. Dens offentlige klient-id er gemt som GitHub Actions variable `MATOMO_CLIENT_ID`. For at aktivere opdateringen mangler dens klienthemmelighed som repository secret `MATOMO_CLIENT_SECRET` under GitHub Settings → Secrets and variables → Actions. Kopiér den direkte fra Matomo til GitHub; den må ikke skrives i filer, issues eller kommentarer. Kør derefter workflowet manuelt første gang for at validere rapporterne. Uden secret bevares det daterede udtræk.
+Workflowet [Update GF27 dashboard data](.github/workflows/update-dashboard.yml) kører dagligt kl. 06:17 UTC (08:17 dansk sommertid, 07:17 dansk vintertid). Det henter aggregerede tal fra Matomo og opdaterer `docs/data.json`; GitHub Pages udgiver derefter den nye datafil. Det kan også [startes manuelt](https://github.com/Michellelagergaard/gf27-dashboard/actions/workflows/update-dashboard.yml) med **Run workflow**. Adgangen bruger en særskilt fortrolig OAuth-klient med kun `matomo:read`; klient-id ligger som Actions variable `MATOMO_CLIENT_ID`, og klienthemmeligheden som Actions secret `MATOMO_CLIENT_SECRET`. Hemmeligheden må ikke skrives i filer, issues eller kommentarer. Tallene opdateres én gang om dagen, ikke løbende i realtid.
 
 `dashboard.html` og `worker/index.js` er kildekode til en tidligere, ejerprivat Sites-version. Den delbare GitHub-visning er `docs/index.html` med `docs/app.js` og `docs/data.json`.
