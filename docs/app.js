@@ -1,4 +1,4 @@
-const launch='2026-09-26';
+const launch='2026-09-01';
 const fmt=new Intl.DateTimeFormat('da-DK',{day:'numeric',month:'short'});
 const datefmt=new Intl.DateTimeFormat('da-DK',{day:'numeric',month:'long',year:'numeric',timeZone:'Europe/Copenhagen'});
 const from=document.getElementById('from'),to=document.getElementById('to');
@@ -35,25 +35,29 @@ function render(){
     totalDays<7?`Der er kun ${totalDays} dage med målinger. Derfor viser 7 dage, 30 dage og siden start de samme tal endnu.`:
     mode==='30'&&totalDays<30?`Der er kun ${totalDays} dage med målinger; 30 dage omfatter derfor hele måleperioden.`:'';
   const sum=key=>selected.reduce((total,day)=>total+number(day[key]),0);
-  const views=sum('views'),clicks=sum('clicks'),visits=selected.every(day=>day.visits!==null)?sum('visits'):null;
+  const views=sum('views'),measured=selected.filter(day=>day.clicks!==null),clicks=measured.reduce((total,day)=>total+number(day.clicks),0),visits=sum('visits');
+  const partial=measured.length!==selected.length;
+  const clickDetail=document.getElementById('click-detail');
+  clickDetail.textContent=!measured.length?'Ikke målt før 26. september':partial?'Kun hændelser fra 26. september':'Handlinger · ikke gennemførte tilmeldinger';
   document.getElementById('dates').textContent=datefmt.format(new Date(start+'T12:00:00Z'))+' – '+datefmt.format(new Date(end+'T12:00:00Z'));
   document.getElementById('views').textContent=format(views);
-  document.getElementById('clicks').textContent=format(clicks);
+  document.getElementById('clicks').textContent=measured.length?format(clicks):'—';
   document.getElementById('visits').textContent=visits===null?'—':format(visits);
   document.getElementById('visit-detail').textContent=visits===null?'Kan ikke opgøres sikkert fra dette udtræk':'Besøg på GF27 i den valgte periode';
-  document.getElementById('rate').textContent=visits?Math.round(clicks/visits*100)+' %':'—';
+  document.getElementById('rate').textContent=!partial&&visits?Math.round(clicks/visits*100)+' %':'—';
+  document.getElementById('rate-detail').textContent=partial?'Kræver klikmåling i hele perioden':'Antal klik pr. besøg · ikke tilmeldinger';
   const max=Math.max(1,...selected.map(day=>day.views));
   const trend=document.getElementById('trend');trend.replaceChildren(...selected.map(day=>{
     const col=document.createElement('div'),bars=document.createElement('div'),view=document.createElement('span'),click=document.createElement('span'),label=document.createElement('span');
-    col.className='barcol';bars.className='bars';view.className='bar'+(day.views?'':' zero');click.className='bar clicks'+(day.clicks?'':' zero');
+    col.className='barcol';bars.className='bars';view.className='bar'+(day.views?'':' zero');click.className='bar clicks'+(day.clicks?'':' zero');if(day.clicks===null)click.classList.add('unmeasured');
     view.style.setProperty('--h',day.views?Math.max(9,day.views/max*100)+'%':'0%');click.style.setProperty('--h',day.clicks?Math.max(9,day.clicks/max*100)+'%':'0%');
-    view.title=day.views+' sidevisninger';click.title=day.clicks+' klik';label.className='day';label.textContent=fmt.format(new Date(day.date+'T12:00:00Z'));
+    view.title=day.views+' sidevisninger';click.title=day.clicks===null?'Klik ikke målt denne dag':day.clicks+' klik';label.className='day';label.textContent=fmt.format(new Date(day.date+'T12:00:00Z'));
     bars.append(view,click);col.append(bars,label);return col;
   }));
-  trend.setAttribute('aria-label',selected.map(day=>`${day.date}: ${day.views} sidevisninger, ${day.clicks} klik`).join('; '));
-  list('sections',combined(selected,'section'),'Ingen sektionsklik registreret i den valgte periode.');
-  list('faq',combined(selected,'faq'),'Ingen FAQ-åbninger registreret i den valgte periode.');
-  list('scroll',combined(selected,'scroll'),'Ingen scrollhændelser registreret i den valgte periode.');
+  trend.setAttribute('aria-label',selected.map(day=>`${day.date}: ${day.views} sidevisninger, ${day.clicks===null?'klik ikke målt':day.clicks+' klik'}`).join('; '));
+  list('sections',combined(selected,'section'),'Ingen sektionsklik registreret siden målingen begyndte 26. september.');
+  list('faq',combined(selected,'faq'),'Ingen FAQ-åbninger registreret siden målingen begyndte 26. september.');
+  list('scroll',combined(selected,'scroll'),'Ingen scrollhændelser registreret siden målingen begyndte 26. september.');
   const span=selected.length,priorEnd=datePlus(start,-1),priorStart=datePlus(start,-span);
   const previous=days.filter(day=>day.date>=priorStart&&day.date<=priorEnd);
   const comparison=document.getElementById('comparison');
@@ -73,7 +77,7 @@ async function init(){
     from.min=to.min=launch;from.max=to.max=last;from.value=launch;to.value=last;
     const snapshot=data.source!=='matomo';
     document.getElementById('status').textContent=(snapshot?'Kontrolleret udtræk · ':'Matomo · opdateret ')+datefmt.format(new Date(data.updatedAt));
-    document.getElementById('notice').textContent=snapshot?'Tallene er et kontrolleret udtræk fra 26.–28. september 2026. Automatisk opdatering afventer Matomo-adgang til GitHub.':'Aggregerede Matomo-tal opdateres via GitHub. Klikrate er antal klik pr. besøg; flere klik i samme besøg kan give over 100 %. En gennemført tilmelding måles ikke her.';
+    document.getElementById('notice').textContent=snapshot?'Tallene er et kontrolleret udtræk.':'Sidevisninger og besøg vises fra 1. september. Klik, FAQ, sektioner og scroll måles fra 26. september. Opsætningstesten 25. september er udeladt. Tal opdateres dagligt fra Matomo. Klik er ikke gennemførte tilmeldinger.';
     render();
   }catch{document.getElementById('notice').textContent='Data kan ikke hentes. Prøv at genindlæse siden.'}
 }
