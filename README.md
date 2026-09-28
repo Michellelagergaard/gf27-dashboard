@@ -6,7 +6,7 @@ Dashboardet viser aggregeret aktivitet: sidevisninger, besøg, klik mod tilmeldi
 
 ## Datastatus
 
-Data hentes nu automatisk fra Matomo. Første vellykkede opdatering blev kørt 28. september 2026, og dashboardet viser opdateringstidspunktet. Sidevisninger og besøg hentes fra GF27-sidens publicering 1. september 2026. Klik, FAQ, sektioner og scroll kan kun vises fra hændelsesmålingen 26. september. Opsætningstesten 25. september er udeladt. Vælg datoer for at sammenligne delperioder; klikrate vises kun, når hændelser blev målt i hele den valgte periode. Klik mod tilmelding betyder ikke gennemført tilmelding. Matomo leverer p.t. antal FAQ-åbninger, sektionsklik og scrollhændelser uden underopdeling på spørgsmålsnavn, sektion eller scrolldybde; dashboardet viser de samlede antal med tydelig mærkning.
+Data hentes nu automatisk fra Matomo. Første vellykkede opdatering blev kørt 28. september 2026, og dashboardet viser opdateringstidspunktet. Sidevisninger og besøg hentes fra GF27-sidens publicering 1. september 2026. Klik, FAQ, sektioner og scroll kan kun vises fra hændelsesmålingen 26. september. Opsætningstesten 25. september er udeladt. Vælg datoer for at sammenligne delperioder; klikrate vises kun, når hændelser blev målt i hele den valgte periode. Klik mod tilmelding betyder ikke gennemført tilmelding. GF27-hændelser hentes fra Matomos særskilte GF27-kategori uden det sidebaserede besøgssegment, som aktuelt returnerer forældede tal for i dag. Matomo leverer p.t. antal FAQ-åbninger, sektionsklik og scrollhændelser uden underopdeling på spørgsmålsnavn, sektion eller scrolldybde; dashboardet viser de samlede antal med tydelig mærkning.
 
 ## Opdatering fra Matomo
 
