@@ -34,6 +34,14 @@ async function report(method,date,extra={}) {
   return result;
 }
 async function oneDay(date) {
+  if(date===today){
+    const [site,unfilteredPages,unfilteredCategories]=await Promise.all([
+      report('VisitsSummary.get',date,{segment:''}),
+      report('Actions.getPageUrls',date,{segment:'',flat:'1',filter_pattern:'gf27-generalforsamling'}),
+      report('Events.getCategory',date,{segment:''})
+    ]);
+    console.log('GF27 diagnostic',JSON.stringify({date,siteVisits:n(site.nb_visits),pageViews:rows(unfilteredPages).filter(row=>String(row.label||'').toLowerCase().includes('gf27-generalforsamling')).reduce((sum,row)=>sum+n(row.nb_hits),0),gf27Events:n(rows(unfilteredCategories).find(row=>row.label==='GF27')?.nb_events)}));
+  }
   const [visits,pages,categories]=await Promise.all([
     report('VisitsSummary.get',date),
     report('Actions.getPageUrls',date,{flat:'1',filter_pattern:'gf27-generalforsamling'}),
