@@ -52,13 +52,14 @@
     @media(max-width:950px){.kpis{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr}.wide{grid-column:auto}}
     @media(max-width:620px){header{display:block}.headlinks{margin-top:15px}.toolbar{align-items:flex-start}.controls{width:100%}.controls button{flex:1;padding:9px 8px}.kpis{gap:9px}.card{padding:16px;min-height:128px}.card .number{font-size:2rem}.panel{padding:18px}}
   </style>
+  <script defer src="data.js"></script>
   <script defer src="app.js"></script>
 </head>
 <body>
 <main class="shell">
   <header>
     <div><p class="eyebrow">Dansk Psykolog Forening · Generalforsamling 2027</p><h1>GF27 · Aktivitet</h1><p class="sub">Hvordan medlemmerne bruger GF27-siden</p></div>
-    <div class="headlinks"><span class="status" id="status">Øjebliksbillede · 28. september 2026</span><a href="https://www.dp.dk/fag-og-politik/gf27-generalforsamling/" target="_blank" rel="noopener">Se GF27-siden ↗</a><a id="source" href="#" target="_blank" rel="noopener">Åbn Matomo ↗</a></div>
+    <div class="headlinks"><span class="status" id="status">Indlæser data…</span><a href="https://www.dp.dk/fag-og-politik/gf27-generalforsamling/" target="_blank" rel="noopener">Se GF27-siden ↗</a><a id="source" href="#" target="_blank" rel="noopener">Åbn Matomo ↗</a></div>
   </header>
   <section class="toolbar" aria-label="Periode">
     <div><strong>Periode</strong><small id="dates">26.–28. september 2026</small></div>
@@ -66,11 +67,11 @@
     <div class="range" id="range"><label>Fra <input id="from" type="date" min="2026-09-26" max="2026-09-28" value="2026-09-26"></label><label>Til <input id="to" type="date" min="2026-09-26" max="2026-09-28" value="2026-09-28"></label></div>
   </section>
   <p class="period-note" id="period-note" aria-live="polite"></p>
-  <p class="notice" id="notice">Målingen begyndte 25. september. Den første dags opsætningstest er udeladt. Tallene nedenfor er et kontrolleret udtræk fra Matomo til og med 28. september. Seneste dataopdatering vises øverst.</p>
+  <p class="notice" id="notice">Indlæser seneste Matomo-tal…</p>
   <section class="kpis" aria-label="Nøgletal">
-    <div class="card"><span class="label">Sidevisninger</span><span class="number" id="views">2</span><span class="detail">GF27-siden · ikke unikke personer</span></div>
+    <div class="card"><span class="label">Sidevisninger</span><span class="number" id="views">—</span><span class="detail">GF27-siden · ikke unikke personer</span></div>
     <div class="card"><span class="label">Besøg</span><span class="number" id="visits">—</span><span class="detail" id="visit-detail">Kan ikke opgøres sikkert fra dette udtræk</span></div>
-    <div class="card focus"><span class="label">Klik mod tilmelding</span><span class="number" id="clicks">2</span><span class="detail">Handlinger · ikke gennemførte tilmeldinger</span></div>
+    <div class="card focus"><span class="label">Klik mod tilmelding</span><span class="number" id="clicks">—</span><span class="detail">Handlinger · ikke gennemførte tilmeldinger</span></div>
     <div class="card"><span class="label">Klikrate</span><span class="number" id="rate">—</span><span class="detail">Antal klik pr. besøg · ikke tilmeldinger</span></div>
   </section>
   <section class="grid">
