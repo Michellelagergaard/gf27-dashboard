@@ -29,6 +29,11 @@ function render(){
   if(mode==='custom'){start=from.value;end=to.value}
   if(start>end){document.getElementById('dates').textContent='Vælg en slutdato efter startdato';return}
   const selected=days.filter(day=>day.date>=start&&day.date<=end);
+  const totalDays=days.length;
+  document.getElementById('period-note').textContent=
+    mode==='custom'?'Valgt periode: '+selected.length+' dage med målinger.':
+    totalDays<7?`Der er kun ${totalDays} dage med målinger. Derfor viser 7 dage, 30 dage og siden start de samme tal endnu.`:
+    mode==='30'&&totalDays<30?`Der er kun ${totalDays} dage med målinger; 30 dage omfatter derfor hele måleperioden.`:'';
   const sum=key=>selected.reduce((total,day)=>total+number(day[key]),0);
   const views=sum('views'),clicks=sum('clicks'),visits=selected.every(day=>day.visits!==null)?sum('visits'):null;
   document.getElementById('dates').textContent=datefmt.format(new Date(start+'T12:00:00Z'))+' – '+datefmt.format(new Date(end+'T12:00:00Z'));
