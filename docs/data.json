@@ -1,6 +1,7 @@
 {
   "source": "matomo",
-  "updatedAt": "2026-09-28T13:43:33.751Z",
+  "extractorVersion": 2,
+  "updatedAt": "2026-09-28T13:46:51.378Z",
   "days": [
     {
       "date": "2026-09-01",
@@ -264,13 +265,28 @@
     },
     {
       "date": "2026-09-28",
-      "views": 0,
-      "visits": 0,
-      "visitors": 0,
+      "views": 2,
+      "visits": 2,
+      "visitors": 2,
       "clicks": 0,
-      "section": [],
-      "faq": [],
-      "scroll": []
+      "section": [
+        {
+          "label": "Sektionsklik (uden sektionsnavn)",
+          "count": 1
+        }
+      ],
+      "faq": [
+        {
+          "label": "FAQ-åbninger (uden spørgsmålsnavn)",
+          "count": 9
+        }
+      ],
+      "scroll": [
+        {
+          "label": "Scrollhændelser (uden dybde)",
+          "count": 6
+        }
+      ]
     }
   ]
 }
