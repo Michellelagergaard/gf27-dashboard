@@ -4,13 +4,14 @@ Internt dashboard for aktivitet på [GF27-siden](https://www.dp.dk/fag-og-politi
 
 ## Status
 
-Dashboardet vises på et privat Site. Koden i dette repository beskriver visningen og en serverbaseret Matomo-forbindelse. Uden `MATOMO_TOKEN` vises det verificerede øjebliksbillede fra 26.–28. september 2026. API-adgangen er endnu ikke konfigureret.
+Dashboardet vises på et privat [Site](https://gf27-aktivitetsdashboard.dansk-psykol-5476.chatgpt.site). Det daterede Matomo-udtræk fra 26.–28. september 2026 er synligt, indtil Matomo OAuth-klienten er gemt og dens offentlige klient-id er sat som `MATOMO_CLIENT_ID` i Sites runtime-miljø. Derefter kan en bruger med adgang til Matomo trykke **Forbind Matomo** og give dashboardet læseadgang med sin egen konto.
 
 ## Data og sikkerhed
 
 - Matomo site ID 3; GF27 måles i kategorien `GF27`.
-- Token skal oprettes særskilt til denne integration og gemmes som en hemmelig runtime-værdi hos hostingudbyderen. Det må aldrig lægges i dette repository.
+- OAuth-klienten skal være **Public**, have authorisation code med PKCE, refresh token og højst `matomo:read`. Registreret redirect URI: `https://gf27-aktivitetsdashboard.dansk-psykol-5476.chatgpt.site/oauth/callback`.
+- Ingen klienthemmelighed eller Matomo-token i repository. Browseren holder den enkelte brugers adgang i sessionStorage for den åbne fane. Worker videresender kun læseforespørgsler til Matomo.
 - Klik mod tilmelding er ikke en gennemført tilmelding.
 - Dashboardet er privat, indtil adgang til projektgruppen er aftalt.
 
-`dashboard.html` er visningen. `worker/index.js` er den serverbaserede Matomo-rapporthentning. `scripts/` bygger og kontrollerer artefaktet.
+`dashboard.html` er visningen. `worker/index.js` håndterer OAuth-udveksling og rapporthentning. `scripts/` bygger og kontrollerer artefaktet.
