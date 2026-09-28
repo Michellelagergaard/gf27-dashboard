@@ -66,7 +66,7 @@ function render(){
     const prev=previous.reduce((total,day)=>total+number(day.views),0),delta=views-prev;
     comparison.textContent=`${format(views)} sidevisninger mod ${format(prev)} i den foregående periode (${delta>=0?'+':''}${format(delta)}).`;
   }
-  source.href='https://dp.matomo.cloud/index.php?idSite=3&period=day&date=today&action=index&module=CoreHome#?period=range&date='+start+','+end+'&segment=pageUrl%3D%40gf27-generalforsamling&idSite=3&category=Dashboard_Dashboard&subcategory=2';
+  source.href='https://dp.matomo.cloud/index.php?idSite=3&period=day&date=today&action=index&module=CoreHome#?period=range&date='+start+','+end+'&idSite=3&category=Dashboard_Dashboard&subcategory=2';
 }
 async function init(){
   try{
