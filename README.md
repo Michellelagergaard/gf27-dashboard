@@ -1,17 +1,21 @@
-# GF27-dashboard
+# GF27 · aktivitetsdashboard
 
-Internt dashboard for aktivitet på [GF27-siden](https://www.dp.dk/fag-og-politik/gf27-generalforsamling/).
+Dashboard for aggregeret aktivitet på [GF27-siden](https://www.dp.dk/fag-og-politik/gf27-generalforsamling/): sidevisninger, besøg, klik mod tilmelding, FAQ, sektioner, scroll og periodevalg.
 
-## Status
+## Se dashboardet
 
-Dashboardet vises på et privat [Site](https://gf27-aktivitetsdashboard.dansk-psykol-5476.chatgpt.site). Matomo OAuth-klienten er oprettet med læseadgang, og klient-id er sat i Sites som `MATOMO_CLIENT_ID`. En bruger med adgang til både det private Site og Matomo kan trykke **Forbind Matomo** og godkende dashboardet med sin egen Matomo-konto. Før første godkendelse viser dashboardet et dateret udtræk fra 26.–28. september 2026. Liveforløbet skal afprøves i en adgangsgodkendt browsersession.
+Den delbare GitHub-version ligger i [`docs/index.html`](docs/index.html) og læser [`docs/data.json`](docs/data.json). Repositoryet er privat. GitHub Pages er endnu ikke slået til: GitHub kræver, at dette repository gøres offentligt eller kontoen opgraderes. Et almindeligt GitHub Pages-site er offentligt tilgængeligt på internettet, selv hvis kildekoden ligger i et privat repository. Privat Pages-adgang til udvalgte kollegaer kræver en organisation på GitHub Enterprise Cloud.
 
-## Data og sikkerhed
+`docs/data.json` indeholder et kontrolleret udtræk fra 26.–28. september 2026, tydeligt mærket i dashboardet. Det er ikke et løbende opdateret talgrundlag endnu.
 
-- Matomo site ID 3; GF27 måles i kategorien `GF27`.
-- OAuth-klienten er **Public** med authorisation code/PKCE, refresh token og `matomo:read`. Registreret redirect URI: `https://gf27-aktivitetsdashboard.dansk-psykol-5476.chatgpt.site/oauth/callback`.
-- Ingen klienthemmelighed eller Matomo-token i repository. Browseren holder den enkelte brugers adgang i sessionStorage for den åbne fane. Worker videresender kun læseforespørgsler til Matomo.
-- Klik mod tilmelding er ikke en gennemført tilmelding.
-- Dashboardet er privat, indtil adgang til projektgruppen er aftalt.
+## Daglig opdatering
 
-`dashboard.html` er visningen. `worker/index.js` håndterer OAuth-udveksling og rapporthentning. `scripts/` bygger og kontrollerer artefaktet.
+Workflowet [Update GF27 dashboard data](.github/workflows/update-dashboard.yml) kan hente aggregerede rapporter fra Matomo og opdatere `docs/data.json` dagligt. Det kræver en særskilt Matomo API-token med læseadgang til site 3, gemt som repository secret `MATOMO_TOKEN_AUTH` under GitHub Settings → Secrets and variables → Actions. Tokenet må ikke skrives i filer, issues eller kommentarer. Workflowet kan også startes manuelt efter opsætning. Uden secret bevarer det det daterede udtræk.
+
+Rapporter filtreres til GF27-sidebesøg, og kun sammenfattede tal og hændelsesnavne skrives til datafilen. Klik mod tilmelding betyder ikke gennemført tilmelding. Data fra opsætningstesten 25. september udelades.
+
+## Adgang og offentliggørelse
+
+Det private repository kan deles med navngivne GitHub-kollaboratører. GitHub Pages kan ikke begrænses til disse kollaboratører på denne personlige konto. Beslut derfor, om de aggregerede tal må være offentligt tilgængelige, før Pages aktiveres. Hvis tallene skal være interne, skal de hostes bag adgangskontrol et andet sted eller via en egnet Enterprise Cloud-organisation.
+
+Den tidligere Sites-version findes fortsat i `dashboard.html` og `worker/index.js`, men er ejerprivat og er ikke den delbare GitHub-visning. Ingen Matomo-token eller klienthemmelighed findes i repositoryet.
