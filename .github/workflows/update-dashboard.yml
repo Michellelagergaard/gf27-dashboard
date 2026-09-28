@@ -15,7 +15,8 @@ jobs:
           node-version: '22'
       - name: Fetch aggregate Matomo reports
         env:
-          MATOMO_TOKEN_AUTH: ${{ secrets.MATOMO_TOKEN_AUTH }}
+          MATOMO_CLIENT_ID: ${{ vars.MATOMO_CLIENT_ID }}
+          MATOMO_CLIENT_SECRET: ${{ secrets.MATOMO_CLIENT_SECRET }}
         run: node scripts/export-report.mjs
       - name: Commit updated aggregate data
         run: |
