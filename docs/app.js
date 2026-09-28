@@ -77,7 +77,7 @@ async function init(){
     from.min=to.min=launch;from.max=to.max=last;from.value=launch;to.value=last;
     const snapshot=data.source!=='matomo';
     document.getElementById('status').textContent=(snapshot?'Kontrolleret udtræk · ':'Matomo · opdateret ')+datefmt.format(new Date(data.updatedAt));
-    document.getElementById('notice').textContent=snapshot?'Tallene er et kontrolleret udtræk.':'Sidevisninger og besøg vises fra 1. september. Klik, FAQ, sektioner og scroll måles fra 26. september. Opsætningstesten 25. september er udeladt. Tal opdateres dagligt fra Matomo. Klik er ikke gennemførte tilmeldinger.';
+    document.getElementById('notice').textContent=snapshot?'Tallene er et kontrolleret udtræk.':'Sidevisninger og besøg vises fra 1. september. Klik, FAQ, sektioner og scroll måles fra 26. september. Opsætningstesten 25. september er udeladt. Tal opdateres to gange dagligt fra Matomo. Klik er ikke gennemførte tilmeldinger.';
     render();
   }catch{document.getElementById('notice').textContent='Data kan ikke hentes. Prøv at genindlæse siden.'}
 }
