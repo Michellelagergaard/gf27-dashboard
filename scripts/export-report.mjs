@@ -40,7 +40,10 @@ async function oneDay(date) {
       report('Actions.getPageUrls',date,{segment:'',flat:'1',filter_pattern:'gf27-generalforsamling'}),
       report('Events.getCategory',date,{segment:''})
     ]);
-    console.log('GF27 diagnostic',JSON.stringify({date,siteVisits:n(site.nb_visits),pageViews:rows(unfilteredPages).filter(row=>String(row.label||'').toLowerCase().includes('gf27-generalforsamling')).reduce((sum,row)=>sum+n(row.nb_hits),0),gf27Events:n(rows(unfilteredCategories).find(row=>row.label==='GF27')?.nb_events)}));
+    const matched=rows(unfilteredPages).filter(row=>String(row.label||'').toLowerCase().includes('gf27-generalforsamling'));
+    const category=rows(unfilteredCategories).find(row=>row.label==='GF27');
+    const eventActions=category?.idsubdatatable?rows(await report('Events.getActionFromCategoryId',date,{segment:'',idSubtable:String(category.idsubdatatable)})):[];
+    console.log('GF27 diagnostic',JSON.stringify({date,siteVisits:n(site.nb_visits),pageRows:matched.map(row=>({views:n(row.nb_hits),visits:n(row.nb_visits)})),gf27Events:n(category?.nb_events),actions:eventActions.map(row=>({action:row.label,count:n(row.nb_events),hasSubtable:Boolean(row.idsubdatatable)}))}));
   }
   const [visits,pages,categories]=await Promise.all([
     report('VisitsSummary.get',date),
