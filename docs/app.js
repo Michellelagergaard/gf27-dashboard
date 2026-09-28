@@ -1,6 +1,7 @@
 const launch='2026-09-01';
 const fmt=new Intl.DateTimeFormat('da-DK',{day:'numeric',month:'short'});
 const datefmt=new Intl.DateTimeFormat('da-DK',{day:'numeric',month:'long',year:'numeric',timeZone:'Europe/Copenhagen'});
+const timefmt=new Intl.DateTimeFormat('da-DK',{hour:'2-digit',minute:'2-digit',timeZone:'Europe/Copenhagen'});
 const from=document.getElementById('from'),to=document.getElementById('to');
 const source=document.getElementById('source');
 let report=null,mode='7';
@@ -76,7 +77,7 @@ async function init(){
     const last=report.days.at(-1).date;
     from.min=to.min=launch;from.max=to.max=last;from.value=launch;to.value=last;
     const snapshot=data.source!=='matomo';
-    document.getElementById('status').textContent=(snapshot?'Kontrolleret udtræk · ':'Matomo · opdateret ')+datefmt.format(new Date(data.updatedAt));
+    document.getElementById('status').textContent=(snapshot?'Kontrolleret udtræk · ':'Matomo · opdateret ')+datefmt.format(new Date(data.updatedAt))+' kl. '+timefmt.format(new Date(data.updatedAt));
     document.getElementById('notice').textContent=snapshot?'Tallene er et kontrolleret udtræk.':'Sidevisninger og besøg vises fra 1. september. Klik, FAQ, sektioner og scroll måles fra 26. september. Opsætningstesten 25. september er udeladt. Tal opdateres to gange dagligt fra Matomo. Klik er ikke gennemførte tilmeldinger.';
     render();
   }catch{document.getElementById('notice').textContent='Data kan ikke hentes. Prøv at genindlæse siden.'}
