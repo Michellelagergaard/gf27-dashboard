@@ -66,8 +66,8 @@ function render(){
 }
 async function init(){
   try{
-    const response=await fetch('data.json',{cache:'no-store'});if(!response.ok)throw Error();
-    const data=await response.json();if(!Array.isArray(data.days)||!data.days.length)throw Error();
+    let data=window.GF27_DATA;
+    if(!data){const response=await fetch('data.json',{cache:'no-store'});if(!response.ok)throw Error();data=await response.json()}if(!Array.isArray(data.days)||!data.days.length)throw Error();
     report=data;report.days.sort((a,b)=>a.date.localeCompare(b.date));
     const last=report.days.at(-1).date;
     from.min=to.min=launch;from.max=to.max=last;from.value=launch;to.value=last;
