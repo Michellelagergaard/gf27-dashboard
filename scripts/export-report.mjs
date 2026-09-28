@@ -7,6 +7,7 @@ if (!clientId || !clientSecret) {
   process.exit(0);
 }
 const file = new URL('../docs/data.json', import.meta.url);
+const scriptFile = new URL('../docs/data.js', import.meta.url);
 const origin = 'https://dp.matomo.cloud/index.php';
 const segment = 'pageUrl=@gf27-generalforsamling';
 const launch = '2026-09-26';
@@ -64,3 +65,4 @@ for(const date of all){
 }
 const result={source:'matomo',updatedAt:new Date().toISOString(),days:all.map(date=>existing.get(date))};
 await writeFile(file,JSON.stringify(result,null,2)+'\n');
+await writeFile(scriptFile,'window.GF27_DATA = '+JSON.stringify(result)+';\n');
