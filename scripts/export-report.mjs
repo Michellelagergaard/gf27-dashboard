@@ -10,7 +10,9 @@ const file = new URL('../docs/data.json', import.meta.url);
 const scriptFile = new URL('../docs/data.js', import.meta.url);
 const origin = 'https://dp.matomo.cloud/index.php';
 const segment = 'pageUrl=@gf27-generalforsamling';
-const launch = '2026-09-26';
+const launch = '2026-09-01';
+const eventLaunch = '2026-09-26';
+const testDate = '2026-09-25';
 const today = new Intl.DateTimeFormat('sv-SE', {timeZone:'Europe/Copenhagen',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
 const dates = (start,end) => {const result=[]; for(let d=new Date(start+'T12:00:00Z');d<=new Date(end+'T12:00:00Z');d.setUTCDate(d.getUTCDate()+1))result.push(d.toISOString().slice(0,10));return result};
 const rows = data => Array.isArray(data)?data:[];
@@ -35,7 +37,7 @@ async function oneDay(date) {
   const [visits,pages,categories]=await Promise.all([
     report('VisitsSummary.get',date),
     report('Actions.getPageUrls',date,{flat:'1',filter_pattern:'gf27-generalforsamling'}),
-    report('Events.getCategory',date)
+    date>=eventLaunch?report('Events.getCategory',date):Promise.resolve([])
   ]);
   const gf=rows(categories).find(row=>row.label==='GF27');
   const actions=gf?.idsubdatatable?rows(await report('Events.getActionFromCategoryId',date,{idSubtable:String(gf.idsubdatatable)})):[];
@@ -47,15 +49,15 @@ async function oneDay(date) {
   return {
     date,views:rows(pages).filter(row=>String(row.label||'').toLowerCase().includes('gf27-generalforsamling')).reduce((sum,row)=>sum+n(row.nb_hits),0),
     visits:n(visits.nb_visits),visitors:n(visits.nb_uniq_visitors),
-    clicks:actions.filter(row=>row.label==='Registration click').reduce((sum,row)=>sum+n(row.nb_events),0),
-    section:detail['Section navigation'],faq:detail['FAQ open'],scroll:detail['Scroll depth']
+    clicks:date>=eventLaunch?actions.filter(row=>row.label==='Registration click').reduce((sum,row)=>sum+n(row.nb_events),0):null,
+    section:date>=eventLaunch?detail['Section navigation']:null,faq:date>=eventLaunch?detail['FAQ open']:null,scroll:date>=eventLaunch?detail['Scroll depth']:null
   };
 }
 
 let previous={};
 try{previous=JSON.parse(await readFile(file,'utf8'))}catch{}
 const existing=new Map((previous.source==='matomo'?previous.days:[]).map(day=>[day.date,day]));
-const all=dates(launch,today);
+const all=dates(launch,today).filter(date=>date!==testDate);
 const refresh=new Set(all.slice(-2));
 for(const date of all){
   if(!existing.has(date)||refresh.has(date)){
