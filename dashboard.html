@@ -56,7 +56,7 @@
 <main class="shell">
   <header>
     <div><p class="eyebrow">Dansk Psykolog Forening · Generalforsamling 2027</p><h1>GF27 · Aktivitet</h1><p class="sub">Hvordan medlemmerne bruger GF27-siden</p></div>
-    <div class="headlinks"><span class="status" id="status">Øjebliksbillede · 28. september 2026</span><a href="https://www.dp.dk/fag-og-politik/gf27-generalforsamling/" target="_blank" rel="noopener">Se GF27-siden ↗</a><a id="source" href="#" target="_blank" rel="noopener">Åbn Matomo ↗</a></div>
+    <div class="headlinks"><span class="status" id="status">Øjebliksbillede · 28. september 2026</span><button id="connect" type="button">Forbind Matomo</button><a href="https://www.dp.dk/fag-og-politik/gf27-generalforsamling/" target="_blank" rel="noopener">Se GF27-siden ↗</a><a id="source" href="#" target="_blank" rel="noopener">Åbn Matomo ↗</a></div>
   </header>
   <section class="toolbar" aria-label="Periode">
     <div><strong>Periode</strong><small id="dates">26.–28. september 2026</small></div>
@@ -86,6 +86,40 @@
   const source=document.getElementById('source');
   const from=document.getElementById('from'),to=document.getElementById('to');
   let mode='7',live=false,requestNumber=0,shown={start:launch,end:last};
+  const authKey='gf27_matomo_auth',pendingKey='gf27_matomo_pending';
+  const connect=document.getElementById('connect');
+  const bytes=length=>crypto.getRandomValues(new Uint8Array(length));
+  const base64url=buffer=>btoa(String.fromCharCode(...new Uint8Array(buffer))).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');
+  const getAuth=()=>{try{return JSON.parse(sessionStorage.getItem(authKey)||'null')}catch{return null}};
+  async function exchange(payload){
+    const response=await fetch('/api/oauth/token',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)});
+    const result=await response.json();if(!response.ok)throw new Error(result.error||'Matomo afviste adgangen');
+    const previous=getAuth();
+    sessionStorage.setItem(authKey,JSON.stringify({access_token:result.access_token,refresh_token:result.refresh_token||previous?.refresh_token,expires_at:Date.now()+Math.max(0,Number(result.expires_in||3600)-60)*1000}));
+  }
+  async function authorization(){
+    const config=await (await fetch('/api/oauth/config')).json();
+    if(!config.client_id)throw new Error('Matomo-forbindelsen afventer færdig opsætning.');
+    const verifier=base64url(bytes(32)),state=base64url(bytes(24));
+    const challenge=base64url(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(verifier)));
+    sessionStorage.setItem(pendingKey,JSON.stringify({verifier,state,time:Date.now()}));
+    const url=new URL(config.authorize_url);
+    for(const [key,value] of Object.entries({response_type:'code',client_id:config.client_id,redirect_uri:config.redirect_uri,scope:'matomo:read',state,code_challenge:challenge,code_challenge_method:'S256'}))url.searchParams.set(key,value);
+    location.assign(url.href);
+  }
+  async function ready(){
+    const params=new URLSearchParams(location.search);
+    if(location.pathname==='/oauth/callback'){
+      history.replaceState(null,'','/');
+      const pending=JSON.parse(sessionStorage.getItem(pendingKey)||'null');sessionStorage.removeItem(pendingKey);
+      if(params.has('error'))throw new Error('Matomo-adgangen blev ikke givet.');
+      if(!pending||pending.state!==params.get('state')||Date.now()-pending.time>600000||!params.get('code'))throw new Error('Matomo-login kunne ikke bekræftes. Prøv igen.');
+      await exchange({grant_type:'authorization_code',code:params.get('code'),code_verifier:pending.verifier});
+    }
+    const auth=getAuth();
+    if(auth?.refresh_token && auth.expires_at<Date.now())await exchange({grant_type:'refresh_token',refresh_token:auth.refresh_token});
+    if(getAuth()?.access_token){connect.textContent='Afbryd Matomo';await load()}
+  }
   function render(){
     const range=document.getElementById('range'); range.classList.toggle('visible',mode==='custom');
     let {start,end}=shown;
@@ -106,12 +140,13 @@
     target.replaceChildren(...items.sort((a,b)=>b.count-a.count).slice(0,5).map(x=>{const row=document.createElement('div'),name=document.createElement('span'),count=document.createElement('strong');row.className='row';name.textContent=x.label;count.textContent=x.count;row.append(name,count);return row}));
   }
   async function load(){
+    const auth=getAuth();if(!auth?.access_token)return;
     const id=++requestNumber;
     let start=launch,end=last;
-    if(live){const now=new Intl.DateTimeFormat('sv-SE',{timeZone:'Europe/Copenhagen',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());end=now;start=mode==='7'?new Date(Date.parse(now+'T12:00:00Z')-6*86400000).toISOString().slice(0,10):mode==='30'?new Date(Date.parse(now+'T12:00:00Z')-29*86400000).toISOString().slice(0,10):launch;if(start<launch)start=launch}
+    if(getAuth()){const now=new Intl.DateTimeFormat('sv-SE',{timeZone:'Europe/Copenhagen',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());end=now;start=mode==='7'?new Date(Date.parse(now+'T12:00:00Z')-6*86400000).toISOString().slice(0,10):mode==='30'?new Date(Date.parse(now+'T12:00:00Z')-29*86400000).toISOString().slice(0,10):launch;if(start<launch)start=launch}
     if(mode==='custom'){start=from.value;end=to.value;if(start>end){render();return}}
     try{
-      const response=await fetch('/api/gf27?from='+encodeURIComponent(start)+'&to='+encodeURIComponent(end));
+      const response=await fetch('/api/gf27?from='+encodeURIComponent(start)+'&to='+encodeURIComponent(end),{headers:{authorization:'Bearer '+auth.access_token}});
       const data=await response.json();
       if(id!==requestNumber)return;
       if(!response.ok||!data.connected)throw new Error(data.reason||data.error||'Ingen forbindelse');
@@ -135,13 +170,17 @@
       render();
     }catch(e){
       if(id!==requestNumber)return;
-      if(live){document.getElementById('status').textContent='Matomo kan ikke hentes nu';document.getElementById('notice').textContent='Matomo-forbindelsen svarede ikke. Tidligere tal vises, indtil rapporten kan opdateres.'}
+      document.getElementById('status').textContent='Matomo kan ikke hentes nu';document.getElementById('notice').textContent='Matomo-forbindelsen svarede ikke. '+(live?'Tidligere tal vises, indtil rapporten kan opdateres.':'Viser fortsat udtrækket fra 28. september.');
     }
   }
   document.querySelectorAll('[data-period]').forEach(b=>b.addEventListener('click',()=>{mode=b.dataset.period;document.querySelectorAll('[data-period]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));if(!live)shown=mode==='custom'?{start:from.value,end:to.value}:{start:launch,end:last};render();load()}));
   [from,to].forEach(i=>i.addEventListener('change',()=>{if(!live)shown={start:from.value,end:to.value};render();load()}));
+  connect.addEventListener('click',async()=>{
+    if(getAuth()){sessionStorage.removeItem(authKey);location.reload();return}
+    try{await authorization()}catch(e){document.getElementById('notice').textContent=e.message}
+  });
   render();
-  load();
+  ready().catch(e=>{sessionStorage.removeItem(authKey);document.getElementById('notice').textContent=e.message});
 </script>
 </body>
 </html>
