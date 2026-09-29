@@ -1,7 +1,7 @@
 {
   "source": "matomo",
   "extractorVersion": 2,
-  "updatedAt": "2026-09-29T06:31:14.867Z",
+  "updatedAt": "2026-09-29T14:30:03.204Z",
   "days": [
     {
       "date": "2026-09-01",
@@ -290,21 +290,21 @@
     },
     {
       "date": "2026-09-29",
-      "views": 1,
-      "visits": 1,
-      "visitors": 1,
-      "clicks": 1,
+      "views": 4,
+      "visits": 4,
+      "visitors": 3,
+      "clicks": 2,
       "section": [],
       "faq": [
         {
           "label": "FAQ-åbninger (uden spørgsmålsnavn)",
-          "count": 2
+          "count": 7
         }
       ],
       "scroll": [
         {
           "label": "Scrollhændelser (uden dybde)",
-          "count": 2
+          "count": 5
         }
       ]
     }
