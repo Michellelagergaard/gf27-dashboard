@@ -1,7 +1,7 @@
 {
   "source": "matomo",
   "extractorVersion": 2,
-  "updatedAt": "2026-09-28T14:31:19.570Z",
+  "updatedAt": "2026-09-29T06:31:14.867Z",
   "days": [
     {
       "date": "2026-09-01",
@@ -265,26 +265,46 @@
     },
     {
       "date": "2026-09-28",
-      "views": 2,
-      "visits": 2,
-      "visitors": 2,
+      "views": 5,
+      "visits": 5,
+      "visitors": 5,
       "clicks": 0,
       "section": [
         {
           "label": "Sektionsklik (uden sektionsnavn)",
-          "count": 1
+          "count": 2
         }
       ],
       "faq": [
         {
           "label": "FAQ-åbninger (uden spørgsmålsnavn)",
-          "count": 9
+          "count": 24
         }
       ],
       "scroll": [
         {
           "label": "Scrollhændelser (uden dybde)",
-          "count": 6
+          "count": 11
+        }
+      ]
+    },
+    {
+      "date": "2026-09-29",
+      "views": 1,
+      "visits": 1,
+      "visitors": 1,
+      "clicks": 1,
+      "section": [],
+      "faq": [
+        {
+          "label": "FAQ-åbninger (uden spørgsmålsnavn)",
+          "count": 2
+        }
+      ],
+      "scroll": [
+        {
+          "label": "Scrollhændelser (uden dybde)",
+          "count": 2
         }
       ]
     }
