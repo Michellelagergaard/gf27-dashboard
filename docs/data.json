@@ -1,7 +1,7 @@
 {
   "source": "matomo",
   "extractorVersion": 2,
-  "updatedAt": "2026-09-29T14:30:03.204Z",
+  "updatedAt": "2026-09-30T06:31:50.203Z",
   "days": [
     {
       "date": "2026-09-01",
@@ -290,9 +290,9 @@
     },
     {
       "date": "2026-09-29",
-      "views": 4,
-      "visits": 4,
-      "visitors": 3,
+      "views": 6,
+      "visits": 6,
+      "visitors": 5,
       "clicks": 2,
       "section": [],
       "faq": [
@@ -304,9 +304,19 @@
       "scroll": [
         {
           "label": "Scrollhændelser (uden dybde)",
-          "count": 5
+          "count": 7
         }
       ]
+    },
+    {
+      "date": "2026-09-30",
+      "views": 0,
+      "visits": 0,
+      "visitors": 0,
+      "clicks": 0,
+      "section": [],
+      "faq": [],
+      "scroll": []
     }
   ]
 }
