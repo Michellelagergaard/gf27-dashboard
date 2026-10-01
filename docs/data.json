@@ -1,7 +1,7 @@
 {
   "source": "matomo",
-  "extractorVersion": 2,
-  "updatedAt": "2026-10-01T06:33:45.853Z",
+  "extractorVersion": 3,
+  "updatedAt": "2026-10-01T09:34:05.692Z",
   "days": [
     {
       "date": "2026-09-01",
@@ -277,8 +277,80 @@
       ],
       "faq": [
         {
-          "label": "FAQ-åbninger (uden spørgsmålsnavn)",
-          "count": 24
+          "label": "program | Hvor finder jeg program og mødemateriale?",
+          "count": 3
+        },
+        {
+          "label": "personvalg | Hvad beskæftiger bestyrelsen sig med?",
+          "count": 2
+        },
+        {
+          "label": "personvalg | Skal jeg deltage på GF27 – generalforsamlingen, hvis jeg vil stille op?",
+          "count": 2
+        },
+        {
+          "label": "tid | Hvornår og hvor holdes generalforsamlingen GF27?",
+          "count": 2
+        },
+        {
+          "label": "mad | Er der adgang for medlemmer med særlige behov?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Er arbejdet honoreret?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Hvad beskæftiger Komité for Etik sig med?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Hvem kan stemme til personvalget?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Hvem kan stille op?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Hvilken opgave har en kritisk revisor?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Hvilke poster kan jeg stille op til?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Hvor meget tid kræver det?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Hvornår er der valg?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Skal jeg have erfaring med bestyrelsesarbejde?",
+          "count": 1
+        },
+        {
+          "label": "tid | Hvad koster det at deltage?",
+          "count": 1
+        },
+        {
+          "label": "tid | Hvornår begynder generalforsamlingen?",
+          "count": 1
+        },
+        {
+          "label": "tilmelding | Hvem kan deltage?",
+          "count": 1
+        },
+        {
+          "label": "tilmelding | Hvordan melder jeg afbud, hvis jeg ikke deltager alligevel?",
+          "count": 1
+        },
+        {
+          "label": "transport | Hvordan kommer jeg til generalforsamlingen?",
+          "count": 1
         }
       ],
       "scroll": [
@@ -297,8 +369,20 @@
       "section": [],
       "faq": [
         {
-          "label": "FAQ-åbninger (uden spørgsmålsnavn)",
-          "count": 7
+          "label": "tid | Hvornår og hvor holdes generalforsamlingen GF27?",
+          "count": 3
+        },
+        {
+          "label": "tid | Hvad koster det at deltage?",
+          "count": 2
+        },
+        {
+          "label": "tid | Hvornår begynder generalforsamlingen?",
+          "count": 1
+        },
+        {
+          "label": "tilmelding | Hvordan tilmelder jeg mig?",
+          "count": 1
         }
       ],
       "scroll": [
