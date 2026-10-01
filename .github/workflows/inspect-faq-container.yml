@@ -2,7 +2,7 @@ name: Inspect public FAQ tag
 on:
   push:
     branches: [faq-question-breakdown]
-    paths: [.github/workflows/inspect-faq-container.yml]
+    paths: [.github/workflows/inspect-faq-container.yml, scripts/export-report.mjs]
 permissions:
   contents: read
 jobs:
@@ -44,5 +44,19 @@ jobs:
             }
             const names=await report('Events.getName',date,{segment:'eventCategory==GF27;eventAction==FAQ open'});
             console.log(date+' names via segment:',names.map(row=>({label:row.label,nb_events:row.nb_events})));
+          }
+          NODE
+      - uses: actions/checkout@v4
+      - name: Verify FAQ export against Matomo
+        env:
+          MATOMO_CLIENT_ID: ${{ vars.MATOMO_CLIENT_ID }}
+          MATOMO_CLIENT_SECRET: ${{ secrets.MATOMO_CLIENT_SECRET }}
+        run: |
+          node scripts/export-report.mjs
+          node - <<'NODE'
+          const fs=require('fs');
+          const data=JSON.parse(fs.readFileSync('docs/data.json'));
+          for(const day of data.days.filter(d=>d.date>='2026-09-26' && d.faq?.length)) {
+            console.log(day.date,JSON.stringify(day.faq),day.faq.reduce((sum,row)=>sum+row.count,0));
           }
           NODE
