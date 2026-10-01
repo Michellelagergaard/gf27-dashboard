@@ -1,5 +1,10 @@
 name: Update GF27 dashboard data
 on:
+  push:
+    branches: [main]
+    paths:
+      - scripts/export-report.mjs
+      - .github/workflows/update-dashboard.yml
   schedule:
     - cron: '17 6 * * *'
     - cron: '17 14 * * *'
