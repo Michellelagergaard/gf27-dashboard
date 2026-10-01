@@ -13,6 +13,7 @@ const segment = 'pageUrl=@gf27-generalforsamling';
 const launch = '2026-09-01';
 const eventLaunch = '2026-09-26';
 const testDate = '2026-09-25';
+const faqNamePattern = /^(tid|tilmelding|program|transport|mad|personvalg) \| .+/;
 const today = new Intl.DateTimeFormat('sv-SE', {timeZone:'Europe/Copenhagen',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
 const dates = (start,end) => {const result=[]; for(let d=new Date(start+'T12:00:00Z');d<=new Date(end+'T12:00:00Z');d.setUTCDate(d.getUTCDate()+1))result.push(d.toISOString().slice(0,10));return result};
 const rows = data => Array.isArray(data)?data:[];
@@ -42,6 +43,7 @@ async function oneDay(date) {
   const pageRows=rows(pages).filter(row=>String(row.label||'').toLowerCase().includes('gf27-generalforsamling'));
   const gf=rows(categories).find(row=>row.label==='GF27');
   const actions=gf?.idsubdatatable?rows(await report('Events.getActionFromCategoryId',date,{segment:'',idSubtable:String(gf.idsubdatatable)})):[];
+  const names=gf?.idsubdatatable?rows(await report('Events.getNameFromCategoryId',date,{segment:'',idSubtable:String(gf.idsubdatatable)})):[];
   const detail={};
   const fallbackLabels={
     'Section navigation':'Sektionsklik (uden sektionsnavn)',
@@ -57,6 +59,16 @@ async function oneDay(date) {
       detail[name]=n(action?.nb_events)>0?[{label:fallbackLabels[name],count:n(action.nb_events)}]:[];
     }
   }
+  // The category's name report has the FAQ labels, even when Matomo omits
+  // action subtables. FAQ names have a section ID followed by " | ".
+  const faqAction=actions.find(row=>row.label==='FAQ open');
+  const faqTotal=n(faqAction?.nb_events);
+  const faqNames=names.filter(row=>faqNamePattern.test(String(row.label||'')))
+    .map(row=>({label:String(row.label),count:n(row.nb_events)}));
+  const namedTotal=faqNames.reduce((sum,row)=>sum+row.count,0);
+  if(namedTotal>faqTotal)throw new Error('FAQ names exceed FAQ action count on '+date);
+  if(faqTotal>namedTotal)faqNames.push({label:fallbackLabels['FAQ open'],count:faqTotal-namedTotal});
+  detail['FAQ open']=faqNames;
   const pageVisits=pageRows.reduce((sum,row)=>sum+n(row.nb_visits),0);
   const pageVisitors=pageRows.reduce((sum,row)=>sum+n(row.nb_uniq_visitors),0);
   return {
@@ -72,13 +84,13 @@ try{previous=JSON.parse(await readFile(file,'utf8'))}catch{}
 const existing=new Map((previous.source==='matomo'?previous.days:[]).map(day=>[day.date,day]));
 const all=dates(launch,today).filter(date=>date!==testDate);
 const refresh=new Set(all.slice(-2));
-if(previous.extractorVersion!==2)refresh.add(eventLaunch);
+if(previous.extractorVersion!==3)for(const date of all)if(date>=eventLaunch)refresh.add(date);
 for(const date of all){
   if(!existing.has(date)||refresh.has(date)){
     existing.set(date,await oneDay(date));
     console.log(`Updated aggregate Matomo report for ${date}`);
   }
 }
-const result={source:'matomo',extractorVersion:2,updatedAt:new Date().toISOString(),days:all.map(date=>existing.get(date))};
+const result={source:'matomo',extractorVersion:3,updatedAt:new Date().toISOString(),days:all.map(date=>existing.get(date))};
 await writeFile(file,JSON.stringify(result,null,2)+'\n');
 await writeFile(scriptFile,'window.GF27_DATA = '+JSON.stringify(result)+';\n');
