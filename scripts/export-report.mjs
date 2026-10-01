@@ -13,7 +13,7 @@ const segment = 'pageUrl=@gf27-generalforsamling';
 const launch = '2026-09-01';
 const eventLaunch = '2026-09-26';
 const testDate = '2026-09-25';
-const faqNamePattern = /^(tid|tilmelding|program|transport|mad|personvalg) \\| .+/;
+const faqNamePattern = /^(tid|tilmelding|program|transport|mad|personvalg) \| .+/;
 const today = new Intl.DateTimeFormat('sv-SE', {timeZone:'Europe/Copenhagen',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
 const dates = (start,end) => {const result=[]; for(let d=new Date(start+'T12:00:00Z');d<=new Date(end+'T12:00:00Z');d.setUTCDate(d.getUTCDate()+1))result.push(d.toISOString().slice(0,10));return result};
 const rows = data => Array.isArray(data)?data:[];
