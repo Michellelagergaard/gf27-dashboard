@@ -8,11 +8,11 @@ let report=null,mode='7';
 const datePlus=(date,offset)=>new Date(Date.parse(date+'T12:00:00Z')+offset*86400000).toISOString().slice(0,10);
 const number=value=>Number(value||0);
 const format=value=>value.toLocaleString('da-DK');
-function list(id,items,message){
+function list(id,items,message,limit=5){
   const target=document.getElementById(id);
   if(!items.length){target.className='empty';target.textContent=message;return}
   target.className='';
-  target.replaceChildren(...items.sort((a,b)=>b.count-a.count).slice(0,5).map(item=>{
+  target.replaceChildren(...items.sort((a,b)=>b.count-a.count).slice(0,limit).map(item=>{
     const row=document.createElement('div'),label=document.createElement('span'),count=document.createElement('strong');
     row.className='row';label.textContent=item.label;count.textContent=format(item.count);row.append(label,count);return row;
   }));
@@ -57,7 +57,12 @@ function render(){
   }));
   trend.setAttribute('aria-label',selected.map(day=>`${day.date}: ${day.views} sidevisninger, ${day.clicks===null?'klik ikke målt':day.clicks+' klik'}`).join('; '));
   list('sections',combined(selected,'section'),'Ingen sektionsklik registreret siden målingen begyndte 26. september.');
-  list('faq',combined(selected,'faq'),'Ingen FAQ-åbninger registreret siden målingen begyndte 26. september.');
+  const faq=combined(selected,'faq');
+  const named=faq.filter(item=>!item.label.includes('(uden spørgsmålsnavn)'));
+  document.getElementById('faq-meta').textContent=named.length
+    ? named.length+' spørgsmål med navn'
+    : 'Spørgsmålsnavne afventer Tag Manager';
+  list('faq',faq,'Ingen FAQ-åbninger registreret siden målingen begyndte 26. september.',Infinity);
   list('scroll',combined(selected,'scroll'),'Ingen scrollhændelser registreret siden målingen begyndte 26. september.');
   const span=selected.length,priorEnd=datePlus(start,-1),priorStart=datePlus(start,-span);
   const previous=days.filter(day=>day.date>=priorStart&&day.date<=priorEnd);
