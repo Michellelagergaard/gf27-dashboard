@@ -61,7 +61,7 @@ function render(){
   const named=faq.filter(item=>!item.label.includes('(uden spørgsmålsnavn)'));
   document.getElementById('faq-meta').textContent=named.length
     ? named.length+' spørgsmål med navn'
-    : 'Spørgsmålsnavne afventer Tag Manager';
+    : 'Ingen navngivne FAQ-åbninger i perioden';
   list('faq',faq,'Ingen FAQ-åbninger registreret siden målingen begyndte 26. september.',Infinity);
   list('scroll',combined(selected,'scroll'),'Ingen scrollhændelser registreret siden målingen begyndte 26. september.');
   const span=selected.length,priorEnd=datePlus(start,-1),priorStart=datePlus(start,-span);
