@@ -1,0 +1,23 @@
+name: Inspect public FAQ tag
+on:
+  push:
+    branches: [faq-question-breakdown]
+    paths: [.github/workflows/inspect-faq-container.yml]
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Inspect public container
+        run: |
+          node - <<'NODE'
+          const url = 'https://cdn.matomo.cloud/dp.matomo.cloud/container_8uWjRDfN.js';
+          const response = await fetch(url);
+          if (!response.ok) throw new Error('Public container returned ' + response.status);
+          const source = await response.text();
+          for (const term of ['FAQ open', 'accordion__item-question']) {
+            const position = source.indexOf(term);
+            console.log(term + ': ' + (position < 0 ? 'not found' : source.slice(Math.max(0, position - 400), position + 500)));
+          }
+          NODE
