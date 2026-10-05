@@ -1,7 +1,7 @@
 {
   "source": "matomo",
   "extractorVersion": 3,
-  "updatedAt": "2026-10-04T18:09:19.373Z",
+  "updatedAt": "2026-10-05T14:29:59.246Z",
   "days": [
     {
       "date": "2026-09-01",
@@ -466,13 +466,49 @@
     },
     {
       "date": "2026-10-04",
-      "views": 0,
-      "visits": 0,
-      "visitors": 0,
+      "views": 1,
+      "visits": 1,
+      "visitors": 1,
       "clicks": 0,
       "section": [],
       "faq": [],
       "scroll": []
+    },
+    {
+      "date": "2026-10-05",
+      "views": 1,
+      "visits": 1,
+      "visitors": 1,
+      "clicks": 0,
+      "section": [],
+      "faq": [
+        {
+          "label": "program | Hvor finder jeg program og mødemateriale?",
+          "count": 1
+        },
+        {
+          "label": "tid | Hvad koster det at deltage?",
+          "count": 1
+        },
+        {
+          "label": "tid | Hvornår og hvor holdes generalforsamlingen GF27?",
+          "count": 1
+        },
+        {
+          "label": "transport | Hvordan booker jeg overnatning?",
+          "count": 1
+        },
+        {
+          "label": "transport | Kan jeg dele et hotelværelse med en anden deltager?",
+          "count": 1
+        }
+      ],
+      "scroll": [
+        {
+          "label": "Scrollhændelser (uden dybde)",
+          "count": 3
+        }
+      ]
     }
   ]
 }
