@@ -1,7 +1,7 @@
 {
   "source": "matomo",
   "extractorVersion": 3,
-  "updatedAt": "2026-10-05T14:29:59.246Z",
+  "updatedAt": "2026-10-05T21:29:24.377Z",
   "days": [
     {
       "date": "2026-09-01",
@@ -476,18 +476,50 @@
     },
     {
       "date": "2026-10-05",
-      "views": 1,
-      "visits": 1,
-      "visitors": 1,
+      "views": 2,
+      "visits": 2,
+      "visitors": 2,
       "clicks": 0,
       "section": [],
       "faq": [
+        {
+          "label": "tid | Hvad koster det at deltage?",
+          "count": 2
+        },
+        {
+          "label": "transport | Hvordan booker jeg overnatning?",
+          "count": 2
+        },
+        {
+          "label": "transport | Kan jeg dele et hotelværelse med en anden deltager?",
+          "count": 2
+        },
+        {
+          "label": "mad | Er der mad og drikke til generalforsamlingen?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Er arbejdet honoreret?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Hvilken opgave har en kritisk revisor?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Hvor meget tid kræver det?",
+          "count": 1
+        },
         {
           "label": "program | Hvor finder jeg program og mødemateriale?",
           "count": 1
         },
         {
-          "label": "tid | Hvad koster det at deltage?",
+          "label": "program | Skal jeg bruge en app under generalforsamlingen?",
+          "count": 1
+        },
+        {
+          "label": "tid | Hvornår begynder generalforsamlingen?",
           "count": 1
         },
         {
@@ -495,18 +527,26 @@
           "count": 1
         },
         {
-          "label": "transport | Hvordan booker jeg overnatning?",
+          "label": "tilmelding | Hvem kan deltage?",
           "count": 1
         },
         {
-          "label": "transport | Kan jeg dele et hotelværelse med en anden deltager?",
+          "label": "tilmelding | Hvordan kan jeg deltage i generalforsamlingen?",
+          "count": 1
+        },
+        {
+          "label": "transport | Hvilke udgifter kan jeg få refunderet?",
+          "count": 1
+        },
+        {
+          "label": "transport | Hvordan kommer jeg til generalforsamlingen?",
           "count": 1
         }
       ],
       "scroll": [
         {
           "label": "Scrollhændelser (uden dybde)",
-          "count": 3
+          "count": 7
         }
       ]
     }
