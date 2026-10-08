@@ -1,7 +1,7 @@
 {
   "source": "matomo",
   "extractorVersion": 3,
-  "updatedAt": "2026-10-08T13:22:54.499Z",
+  "updatedAt": "2026-10-08T19:56:49.829Z",
   "days": [
     {
       "date": "2026-09-01",
@@ -746,38 +746,62 @@
     },
     {
       "date": "2026-10-08",
-      "views": 9,
-      "visits": 7,
-      "visitors": 7,
+      "views": 11,
+      "visits": 9,
+      "visitors": 9,
       "clicks": 4,
       "section": [
         {
           "label": "Sektionsklik (uden sektionsnavn)",
-          "count": 1
+          "count": 3
         }
       ],
       "faq": [
+        {
+          "label": "mad | Er der mad og drikke til generalforsamlingen?",
+          "count": 3
+        },
+        {
+          "label": "personvalg | Er arbejdet honoreret?",
+          "count": 3
+        },
         {
           "label": "personvalg | Hvem kan stemme til personvalget?",
           "count": 2
         },
         {
-          "label": "mad | Er der mad og drikke til generalforsamlingen?",
-          "count": 1
-        },
-        {
-          "label": "personvalg | Er arbejdet honoreret?",
+          "label": "personvalg | Hvilke poster kan jeg stille op til?",
           "count": 2
         },
         {
-          "label": "personvalg | Hvilke poster kan jeg stille op til?",
+          "label": "personvalg | Hvad beskæftiger bestyrelsen sig med?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Hvem kan stille op?",
+          "count": 3
+        },
+        {
+          "label": "personvalg | Skal jeg deltage på GF27 – generalforsamlingen, hvis jeg vil stille op?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Skal jeg have erfaring med bestyrelsesarbejde?",
+          "count": 1
+        },
+        {
+          "label": "program | Hvor finder jeg program og mødemateriale?",
+          "count": 1
+        },
+        {
+          "label": "tid | Hvornår og hvor holdes generalforsamlingen GF27?",
           "count": 1
         }
       ],
       "scroll": [
         {
           "label": "Scrollhændelser (uden dybde)",
-          "count": 12
+          "count": 17
         }
       ]
     }
