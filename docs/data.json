@@ -1,7 +1,7 @@
 {
   "source": "matomo",
   "extractorVersion": 3,
-  "updatedAt": "2026-10-07T19:58:41.366Z",
+  "updatedAt": "2026-10-08T13:22:54.499Z",
   "days": [
     {
       "date": "2026-09-01",
@@ -597,9 +597,9 @@
     },
     {
       "date": "2026-10-07",
-      "views": 15,
-      "visits": 14,
-      "visitors": 12,
+      "views": 16,
+      "visits": 15,
+      "visitors": 13,
       "clicks": 2,
       "section": [
         {
@@ -610,30 +610,38 @@
       "faq": [
         {
           "label": "personvalg | Hvem kan stemme til personvalget?",
-          "count": 8
+          "count": 9
         },
         {
           "label": "personvalg | Er arbejdet honoreret?",
-          "count": 7
+          "count": 8
+        },
+        {
+          "label": "personvalg | Hvem kan stille op?",
+          "count": 6
+        },
+        {
+          "label": "personvalg | Hvilke poster kan jeg stille op til?",
+          "count": 6
+        },
+        {
+          "label": "personvalg | Hvor meget tid kræver det?",
+          "count": 6
+        },
+        {
+          "label": "personvalg | Hvornår er der valg?",
+          "count": 6
         },
         {
           "label": "tid | Hvornår og hvor holdes generalforsamlingen GF27?",
           "count": 6
         },
         {
-          "label": "personvalg | Hvem kan stille op?",
-          "count": 5
+          "label": "transport | Hvordan booker jeg overnatning?",
+          "count": 7
         },
         {
-          "label": "personvalg | Hvilke poster kan jeg stille op til?",
-          "count": 5
-        },
-        {
-          "label": "personvalg | Hvor meget tid kræver det?",
-          "count": 5
-        },
-        {
-          "label": "personvalg | Hvornår er der valg?",
+          "label": "personvalg | Skal jeg deltage på GF27 – generalforsamlingen, hvis jeg vil stille op?",
           "count": 5
         },
         {
@@ -641,19 +649,23 @@
           "count": 5
         },
         {
-          "label": "transport | Hvordan booker jeg overnatning?",
-          "count": 6
+          "label": "personvalg | Hvad beskæftiger bestyrelsen sig med?",
+          "count": 4
         },
         {
-          "label": "personvalg | Skal jeg deltage på GF27 – generalforsamlingen, hvis jeg vil stille op?",
+          "label": "tid | Hvad koster det at deltage?",
+          "count": 4
+        },
+        {
+          "label": "tilmelding | Hvornår er der sidste frist for tilmelding og ændringer?",
+          "count": 4
+        },
+        {
+          "label": "transport | Hvilke udgifter kan jeg få refunderet?",
           "count": 4
         },
         {
           "label": "mad | Er der mad og drikke til generalforsamlingen?",
-          "count": 3
-        },
-        {
-          "label": "personvalg | Hvad beskæftiger bestyrelsen sig med?",
           "count": 3
         },
         {
@@ -665,15 +677,11 @@
           "count": 3
         },
         {
-          "label": "tid | Hvad koster det at deltage?",
+          "label": "tid | Hvornår begynder generalforsamlingen?",
           "count": 3
         },
         {
-          "label": "tilmelding | Hvornår er der sidste frist for tilmelding og ændringer?",
-          "count": 3
-        },
-        {
-          "label": "transport | Hvilke udgifter kan jeg få refunderet?",
+          "label": "tilmelding | Hvordan kan jeg deltage, hvis de fysiske pladser bliver udsolgt?",
           "count": 3
         },
         {
@@ -693,11 +701,19 @@
           "count": 2
         },
         {
-          "label": "tid | Hvornår begynder generalforsamlingen?",
+          "label": "tilmelding | Hvem kan deltage?",
           "count": 2
         },
         {
-          "label": "tilmelding | Hvordan kan jeg deltage, hvis de fysiske pladser bliver udsolgt?",
+          "label": "tilmelding | Hvordan kan jeg deltage i generalforsamlingen?",
+          "count": 2
+        },
+        {
+          "label": "tilmelding | Hvordan tilmelder jeg mig?",
+          "count": 2
+        },
+        {
+          "label": "transport | Hvordan kommer jeg til generalforsamlingen?",
           "count": 2
         },
         {
@@ -705,19 +721,7 @@
           "count": 2
         },
         {
-          "label": "tilmelding | Hvem kan deltage?",
-          "count": 1
-        },
-        {
-          "label": "tilmelding | Hvordan kan jeg deltage i generalforsamlingen?",
-          "count": 1
-        },
-        {
           "label": "tilmelding | Hvordan melder jeg afbud, hvis jeg ikke deltager alligevel?",
-          "count": 1
-        },
-        {
-          "label": "tilmelding | Hvordan tilmelder jeg mig?",
           "count": 1
         },
         {
@@ -725,7 +729,7 @@
           "count": 1
         },
         {
-          "label": "transport | Hvordan kommer jeg til generalforsamlingen?",
+          "label": "tilmelding | Jeg kan ikke deltage, men vil gerne give en fuldmagt til en anden. Hvordan gør jeg?",
           "count": 1
         },
         {
@@ -736,7 +740,44 @@
       "scroll": [
         {
           "label": "Scrollhændelser (uden dybde)",
-          "count": 41
+          "count": 45
+        }
+      ]
+    },
+    {
+      "date": "2026-10-08",
+      "views": 9,
+      "visits": 7,
+      "visitors": 7,
+      "clicks": 4,
+      "section": [
+        {
+          "label": "Sektionsklik (uden sektionsnavn)",
+          "count": 1
+        }
+      ],
+      "faq": [
+        {
+          "label": "personvalg | Hvem kan stemme til personvalget?",
+          "count": 2
+        },
+        {
+          "label": "mad | Er der mad og drikke til generalforsamlingen?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Er arbejdet honoreret?",
+          "count": 2
+        },
+        {
+          "label": "personvalg | Hvilke poster kan jeg stille op til?",
+          "count": 1
+        }
+      ],
+      "scroll": [
+        {
+          "label": "Scrollhændelser (uden dybde)",
+          "count": 12
         }
       ]
     }
