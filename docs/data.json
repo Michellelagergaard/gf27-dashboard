@@ -1,7 +1,7 @@
 {
   "source": "matomo",
   "extractorVersion": 3,
-  "updatedAt": "2026-10-09T13:11:12.430Z",
+  "updatedAt": "2026-10-09T19:32:20.153Z",
   "days": [
     {
       "date": "2026-09-01",
@@ -807,17 +807,45 @@
     },
     {
       "date": "2026-10-09",
-      "views": 4,
-      "visits": 4,
-      "visitors": 4,
+      "views": 7,
+      "visits": 7,
+      "visitors": 7,
       "clicks": 1,
       "section": [
         {
           "label": "Sektionsklik (uden sektionsnavn)",
-          "count": 1
+          "count": 2
         }
       ],
       "faq": [
+        {
+          "label": "tid | Hvad koster det at deltage?",
+          "count": 3
+        },
+        {
+          "label": "tilmelding | Hvem kan deltage?",
+          "count": 3
+        },
+        {
+          "label": "personvalg | Hvem kan stille op?",
+          "count": 2
+        },
+        {
+          "label": "personvalg | Hvor meget tid kræver det?",
+          "count": 3
+        },
+        {
+          "label": "personvalg | Hvornår er der valg?",
+          "count": 2
+        },
+        {
+          "label": "tid | Hvornår og hvor holdes generalforsamlingen GF27?",
+          "count": 2
+        },
+        {
+          "label": "tilmelding | Jeg kan ikke deltage, men vil gerne give en fuldmagt til en anden. Hvordan gør jeg?",
+          "count": 2
+        },
         {
           "label": "transport | Hvordan kommer jeg til generalforsamlingen?",
           "count": 2
@@ -827,19 +855,19 @@
           "count": 1
         },
         {
+          "label": "personvalg | Er arbejdet honoreret?",
+          "count": 1
+        },
+        {
           "label": "personvalg | Hvad beskæftiger bestyrelsen sig med?",
           "count": 1
         },
         {
-          "label": "personvalg | Hvem kan stille op?",
+          "label": "personvalg | Hvem kan stemme til personvalget?",
           "count": 1
         },
         {
-          "label": "personvalg | Hvor meget tid kræver det?",
-          "count": 1
-        },
-        {
-          "label": "personvalg | Hvornår er der valg?",
+          "label": "personvalg | Skal jeg have erfaring med bestyrelsesarbejde?",
           "count": 1
         },
         {
@@ -847,19 +875,11 @@
           "count": 1
         },
         {
-          "label": "tid | Hvad koster det at deltage?",
-          "count": 1
-        },
-        {
           "label": "tid | Hvornår begynder generalforsamlingen?",
           "count": 1
         },
         {
-          "label": "tid | Hvornår og hvor holdes generalforsamlingen GF27?",
-          "count": 1
-        },
-        {
-          "label": "tilmelding | Hvem kan deltage?",
+          "label": "tilmelding | Hvordan kan jeg deltage, hvis de fysiske pladser bliver udsolgt?",
           "count": 1
         },
         {
@@ -871,7 +891,7 @@
           "count": 1
         },
         {
-          "label": "tilmelding | Jeg kan ikke deltage, men vil gerne give en fuldmagt til en anden. Hvordan gør jeg?",
+          "label": "tilmelding | Hvornår er der sidste frist for tilmelding og ændringer?",
           "count": 1
         },
         {
@@ -890,7 +910,7 @@
       "scroll": [
         {
           "label": "Scrollhændelser (uden dybde)",
-          "count": 10
+          "count": 19
         }
       ]
     }
