@@ -1,7 +1,7 @@
 {
   "source": "matomo",
   "extractorVersion": 3,
-  "updatedAt": "2026-10-10T12:26:08.738Z",
+  "updatedAt": "2026-10-10T18:35:03.851Z",
   "days": [
     {
       "date": "2026-09-01",
@@ -920,10 +920,10 @@
     },
     {
       "date": "2026-10-10",
-      "views": 1,
-      "visits": 1,
-      "visitors": 1,
-      "clicks": 0,
+      "views": 5,
+      "visits": 4,
+      "visitors": 4,
+      "clicks": 1,
       "section": [
         {
           "label": "Sektionsklik (uden sektionsnavn)",
@@ -932,11 +932,39 @@
       ],
       "faq": [
         {
-          "label": "mad | Er der adgang for medlemmer med særlige behov?",
-          "count": 1
+          "label": "personvalg | Hvem kan stemme til personvalget?",
+          "count": 3
         },
         {
           "label": "mad | Er der mad og drikke til generalforsamlingen?",
+          "count": 2
+        },
+        {
+          "label": "personvalg | Er arbejdet honoreret?",
+          "count": 2
+        },
+        {
+          "label": "tilmelding | Hvordan kan jeg deltage, hvis de fysiske pladser bliver udsolgt?",
+          "count": 2
+        },
+        {
+          "label": "tilmelding | Hvordan kan jeg deltage i generalforsamlingen?",
+          "count": 2
+        },
+        {
+          "label": "transport | Hvordan booker jeg overnatning?",
+          "count": 2
+        },
+        {
+          "label": "transport | Kan jeg dele et hotelværelse med en anden deltager?",
+          "count": 2
+        },
+        {
+          "label": "transport | Kan jeg parkere ved generalforsamlingen?",
+          "count": 2
+        },
+        {
+          "label": "mad | Er der adgang for medlemmer med særlige behov?",
           "count": 1
         },
         {
@@ -944,15 +972,11 @@
           "count": 1
         },
         {
-          "label": "personvalg | Er arbejdet honoreret?",
-          "count": 1
-        },
-        {
           "label": "personvalg | Hvad beskæftiger bestyrelsen sig med?",
           "count": 1
         },
         {
-          "label": "personvalg | Hvem kan stemme til personvalget?",
+          "label": "personvalg | Hvad beskæftiger Komité for Etik sig med?",
           "count": 1
         },
         {
@@ -960,8 +984,16 @@
           "count": 1
         },
         {
+          "label": "personvalg | Hvilken opgave har en kritisk revisor?",
+          "count": 1
+        },
+        {
           "label": "personvalg | Hvilke poster kan jeg stille op til?",
           "count": 1
+        },
+        {
+          "label": "personvalg | Hvor meget tid kræver det?",
+          "count": 2
         },
         {
           "label": "personvalg | Hvornår er der valg?",
@@ -969,6 +1001,10 @@
         },
         {
           "label": "personvalg | Skal jeg deltage på GF27 – generalforsamlingen, hvis jeg vil stille op?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Skal jeg have erfaring med bestyrelsesarbejde?",
           "count": 1
         },
         {
@@ -1000,14 +1036,6 @@
           "count": 1
         },
         {
-          "label": "tilmelding | Hvordan kan jeg deltage, hvis de fysiske pladser bliver udsolgt?",
-          "count": 1
-        },
-        {
-          "label": "tilmelding | Hvordan kan jeg deltage i generalforsamlingen?",
-          "count": 1
-        },
-        {
           "label": "tilmelding | Hvordan melder jeg afbud, hvis jeg ikke deltager alligevel?",
           "count": 1
         },
@@ -1024,22 +1052,14 @@
           "count": 1
         },
         {
-          "label": "transport | Hvordan booker jeg overnatning?",
-          "count": 1
-        },
-        {
-          "label": "transport | Kan jeg dele et hotelværelse med en anden deltager?",
-          "count": 1
-        },
-        {
-          "label": "transport | Kan jeg parkere ved generalforsamlingen?",
+          "label": "transport | Hvilke udgifter kan jeg få refunderet?",
           "count": 1
         }
       ],
       "scroll": [
         {
           "label": "Scrollhændelser (uden dybde)",
-          "count": 4
+          "count": 13
         }
       ]
     }
