@@ -1,7 +1,7 @@
 {
   "source": "matomo",
   "extractorVersion": 3,
-  "updatedAt": "2026-10-11T18:53:56.909Z",
+  "updatedAt": "2026-10-12T15:15:40.226Z",
   "days": [
     {
       "date": "2026-09-01",
@@ -1069,20 +1069,28 @@
     },
     {
       "date": "2026-10-11",
-      "views": 2,
-      "visits": 2,
-      "visitors": 2,
+      "views": 3,
+      "visits": 3,
+      "visitors": 3,
       "clicks": 1,
       "section": [
         {
           "label": "Sektionsklik (uden sektionsnavn)",
-          "count": 1
+          "count": 2
         }
       ],
       "faq": [
         {
           "label": "tid | Hvad koster det at deltage?",
           "count": 2
+        },
+        {
+          "label": "personvalg | Hvem kan stille op?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Hvornår er der valg?",
+          "count": 1
         },
         {
           "label": "program | Hvor finder jeg program og mødemateriale?",
@@ -1100,7 +1108,22 @@
       "scroll": [
         {
           "label": "Scrollhændelser (uden dybde)",
-          "count": 3
+          "count": 7
+        }
+      ]
+    },
+    {
+      "date": "2026-10-12",
+      "views": 2,
+      "visits": 2,
+      "visitors": 2,
+      "clicks": 0,
+      "section": [],
+      "faq": [],
+      "scroll": [
+        {
+          "label": "Scrollhændelser (uden dybde)",
+          "count": 4
         }
       ]
     }
