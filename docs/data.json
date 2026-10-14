@@ -1,7 +1,7 @@
 {
   "source": "matomo",
   "extractorVersion": 3,
-  "updatedAt": "2026-10-14T11:46:23.747Z",
+  "updatedAt": "2026-10-14T18:37:25.131Z",
   "days": [
     {
       "date": "2026-09-01",
@@ -1201,13 +1201,32 @@
     },
     {
       "date": "2026-10-14",
-      "views": 0,
-      "visits": 0,
-      "visitors": 0,
-      "clicks": 0,
-      "section": [],
-      "faq": [],
-      "scroll": []
+      "views": 1,
+      "visits": 1,
+      "visitors": 1,
+      "clicks": 1,
+      "section": [
+        {
+          "label": "Sektionsklik (uden sektionsnavn)",
+          "count": 1
+        }
+      ],
+      "faq": [
+        {
+          "label": "tid | Hvad koster det at deltage?",
+          "count": 1
+        },
+        {
+          "label": "tid | Hvornår og hvor holdes generalforsamlingen GF27?",
+          "count": 1
+        }
+      ],
+      "scroll": [
+        {
+          "label": "Scrollhændelser (uden dybde)",
+          "count": 1
+        }
+      ]
     }
   ]
 }
