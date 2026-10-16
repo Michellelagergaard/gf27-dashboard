@@ -1,7 +1,7 @@
 {
   "source": "matomo",
   "extractorVersion": 3,
-  "updatedAt": "2026-10-15T18:17:36.248Z",
+  "updatedAt": "2026-10-16T11:17:20.012Z",
   "days": [
     {
       "date": "2026-09-01",
@@ -1298,13 +1298,103 @@
     },
     {
       "date": "2026-10-15",
-      "views": 0,
-      "visits": 0,
-      "visitors": 0,
+      "views": 2,
+      "visits": 2,
+      "visitors": 2,
       "clicks": 0,
       "section": [],
-      "faq": [],
-      "scroll": []
+      "faq": [
+        {
+          "label": "personvalg | Hvilke poster kan jeg stille op til?",
+          "count": 1
+        }
+      ],
+      "scroll": [
+        {
+          "label": "Scrollhændelser (uden dybde)",
+          "count": 4
+        }
+      ]
+    },
+    {
+      "date": "2026-10-16",
+      "views": 1,
+      "visits": 1,
+      "visitors": 1,
+      "clicks": 0,
+      "section": [],
+      "faq": [
+        {
+          "label": "program | Hvordan får jeg teknisk hjælp?",
+          "count": 1
+        },
+        {
+          "label": "program | Hvor finder jeg program og mødemateriale?",
+          "count": 1
+        },
+        {
+          "label": "program | Skal jeg bruge en app under generalforsamlingen?",
+          "count": 1
+        },
+        {
+          "label": "tid | Hvad koster det at deltage?",
+          "count": 1
+        },
+        {
+          "label": "tid | Hvornår begynder generalforsamlingen?",
+          "count": 2
+        },
+        {
+          "label": "tid | Hvornår og hvor holdes generalforsamlingen GF27?",
+          "count": 1
+        },
+        {
+          "label": "tilmelding | Hvordan kan jeg deltage i generalforsamlingen?",
+          "count": 2
+        },
+        {
+          "label": "tilmelding | Hvordan melder jeg afbud, hvis jeg ikke deltager alligevel?",
+          "count": 1
+        },
+        {
+          "label": "tilmelding | Hvordan tilmelder jeg mig?",
+          "count": 1
+        },
+        {
+          "label": "tilmelding | Hvordan ændrer jeg min tilmelding?",
+          "count": 1
+        },
+        {
+          "label": "tilmelding | Hvornår er der sidste frist for tilmelding og ændringer?",
+          "count": 1
+        },
+        {
+          "label": "tilmelding | Jeg kan ikke deltage, men vil gerne give en fuldmagt til en anden. Hvordan gør jeg?",
+          "count": 1
+        },
+        {
+          "label": "transport | Hvilke udgifter kan jeg få refunderet?",
+          "count": 1
+        },
+        {
+          "label": "transport | Hvordan booker jeg overnatning?",
+          "count": 1
+        },
+        {
+          "label": "transport | Hvordan kommer jeg til generalforsamlingen?",
+          "count": 1
+        },
+        {
+          "label": "transport | Kan jeg dele et hotelværelse med en anden deltager?",
+          "count": 1
+        }
+      ],
+      "scroll": [
+        {
+          "label": "Scrollhændelser (uden dybde)",
+          "count": 2
+        }
+      ]
     }
   ]
 }
