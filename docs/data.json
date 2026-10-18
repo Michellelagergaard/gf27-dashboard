@@ -1,7 +1,7 @@
 {
   "source": "matomo",
   "extractorVersion": 3,
-  "updatedAt": "2026-10-17T17:09:25.891Z",
+  "updatedAt": "2026-10-18T10:58:45.563Z",
   "days": [
     {
       "date": "2026-09-01",
@@ -1398,10 +1398,39 @@
     },
     {
       "date": "2026-10-17",
-      "views": 3,
-      "visits": 2,
-      "visitors": 2,
+      "views": 5,
+      "visits": 4,
+      "visitors": 4,
       "clicks": 1,
+      "section": [
+        {
+          "label": "Sektionsklik (uden sektionsnavn)",
+          "count": 2
+        }
+      ],
+      "faq": [
+        {
+          "label": "personvalg | Hvem kan stille op?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Hvornår er der valg?",
+          "count": 1
+        }
+      ],
+      "scroll": [
+        {
+          "label": "Scrollhændelser (uden dybde)",
+          "count": 7
+        }
+      ]
+    },
+    {
+      "date": "2026-10-18",
+      "views": 0,
+      "visits": 0,
+      "visitors": 0,
+      "clicks": 0,
       "section": [],
       "faq": [],
       "scroll": []
