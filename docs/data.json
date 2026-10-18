@@ -1,7 +1,7 @@
 {
   "source": "matomo",
   "extractorVersion": 3,
-  "updatedAt": "2026-10-18T10:58:45.563Z",
+  "updatedAt": "2026-10-18T17:22:58.907Z",
   "days": [
     {
       "date": "2026-09-01",
@@ -1427,13 +1427,68 @@
     },
     {
       "date": "2026-10-18",
-      "views": 0,
-      "visits": 0,
-      "visitors": 0,
-      "clicks": 0,
-      "section": [],
-      "faq": [],
-      "scroll": []
+      "views": 6,
+      "visits": 5,
+      "visitors": 4,
+      "clicks": 2,
+      "section": [
+        {
+          "label": "Sektionsklik (uden sektionsnavn)",
+          "count": 3
+        }
+      ],
+      "faq": [
+        {
+          "label": "tid | Hvad koster det at deltage?",
+          "count": 3
+        },
+        {
+          "label": "tid | Hvornår og hvor holdes generalforsamlingen GF27?",
+          "count": 2
+        },
+        {
+          "label": "tilmelding | Hvordan tilmelder jeg mig?",
+          "count": 2
+        },
+        {
+          "label": "personvalg | Hvem kan stemme til personvalget?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Hvornår er der valg?",
+          "count": 1
+        },
+        {
+          "label": "tid | Hvornår begynder generalforsamlingen?",
+          "count": 1
+        },
+        {
+          "label": "tilmelding | Hvem kan deltage?",
+          "count": 1
+        },
+        {
+          "label": "tilmelding | Hvordan kan jeg deltage, hvis de fysiske pladser bliver udsolgt?",
+          "count": 1
+        },
+        {
+          "label": "tilmelding | Hvordan kan jeg deltage i generalforsamlingen?",
+          "count": 1
+        },
+        {
+          "label": "tilmelding | Hvornår er der sidste frist for tilmelding og ændringer?",
+          "count": 1
+        },
+        {
+          "label": "tilmelding | Jeg kan ikke deltage, men vil gerne give en fuldmagt til en anden. Hvordan gør jeg?",
+          "count": 1
+        }
+      ],
+      "scroll": [
+        {
+          "label": "Scrollhændelser (uden dybde)",
+          "count": 11
+        }
+      ]
     }
   ]
 }
