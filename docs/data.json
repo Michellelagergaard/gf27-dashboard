@@ -1,7 +1,7 @@
 {
   "source": "matomo",
   "extractorVersion": 3,
-  "updatedAt": "2026-10-18T17:22:58.907Z",
+  "updatedAt": "2026-10-19T13:04:31.097Z",
   "days": [
     {
       "date": "2026-09-01",
@@ -1427,23 +1427,35 @@
     },
     {
       "date": "2026-10-18",
-      "views": 6,
-      "visits": 5,
-      "visitors": 4,
-      "clicks": 2,
+      "views": 9,
+      "visits": 8,
+      "visitors": 7,
+      "clicks": 4,
       "section": [
         {
           "label": "Sektionsklik (uden sektionsnavn)",
-          "count": 3
+          "count": 4
         }
       ],
       "faq": [
         {
           "label": "tid | Hvad koster det at deltage?",
-          "count": 3
+          "count": 4
         },
         {
           "label": "tid | Hvornår og hvor holdes generalforsamlingen GF27?",
+          "count": 3
+        },
+        {
+          "label": "personvalg | Hvem kan stemme til personvalget?",
+          "count": 2
+        },
+        {
+          "label": "personvalg | Hvornår er der valg?",
+          "count": 2
+        },
+        {
+          "label": "tid | Hvornår begynder generalforsamlingen?",
           "count": 2
         },
         {
@@ -1451,15 +1463,31 @@
           "count": 2
         },
         {
-          "label": "personvalg | Hvem kan stemme til personvalget?",
+          "label": "personvalg | Er arbejdet honoreret?",
           "count": 1
         },
         {
-          "label": "personvalg | Hvornår er der valg?",
+          "label": "personvalg | Hvad beskæftiger bestyrelsen sig med?",
           "count": 1
         },
         {
-          "label": "tid | Hvornår begynder generalforsamlingen?",
+          "label": "personvalg | Hvem kan stille op?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Hvilke poster kan jeg stille op til?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Hvor meget tid kræver det?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Skal jeg deltage på GF27 – generalforsamlingen, hvis jeg vil stille op?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Skal jeg have erfaring med bestyrelsesarbejde?",
           "count": 1
         },
         {
@@ -1486,9 +1514,19 @@
       "scroll": [
         {
           "label": "Scrollhændelser (uden dybde)",
-          "count": 11
+          "count": 17
         }
       ]
+    },
+    {
+      "date": "2026-10-19",
+      "views": 0,
+      "visits": 0,
+      "visitors": 0,
+      "clicks": 0,
+      "section": [],
+      "faq": [],
+      "scroll": []
     }
   ]
 }
