@@ -1,7 +1,7 @@
 {
   "source": "matomo",
   "extractorVersion": 3,
-  "updatedAt": "2026-10-20T11:30:21.927Z",
+  "updatedAt": "2026-10-20T18:27:50.616Z",
   "days": [
     {
       "date": "2026-09-01",
@@ -1669,35 +1669,55 @@
     },
     {
       "date": "2026-10-20",
-      "views": 9,
-      "visits": 6,
-      "visitors": 5,
-      "clicks": 2,
+      "views": 13,
+      "visits": 10,
+      "visitors": 8,
+      "clicks": 3,
       "section": [
         {
           "label": "Sektionsklik (uden sektionsnavn)",
-          "count": 5
+          "count": 9
         }
       ],
       "faq": [
         {
           "label": "tid | Hvornår og hvor holdes generalforsamlingen GF27?",
-          "count": 4
+          "count": 7
         },
         {
           "label": "transport | Hvordan booker jeg overnatning?",
-          "count": 5
+          "count": 7
+        },
+        {
+          "label": "tilmelding | Hvordan tilmelder jeg mig?",
+          "count": 4
         },
         {
           "label": "tid | Hvad koster det at deltage?",
-          "count": 2
+          "count": 3
         },
         {
           "label": "tid | Hvornår begynder generalforsamlingen?",
-          "count": 2
+          "count": 3
         },
         {
           "label": "transport | Hvilke udgifter kan jeg få refunderet?",
+          "count": 3
+        },
+        {
+          "label": "personvalg | Hvem kan stille op?",
+          "count": 2
+        },
+        {
+          "label": "personvalg | Hvornår er der valg?",
+          "count": 2
+        },
+        {
+          "label": "program | Hvor finder jeg program og mødemateriale?",
+          "count": 2
+        },
+        {
+          "label": "tilmelding | Hvordan kan jeg deltage i generalforsamlingen?",
           "count": 2
         },
         {
@@ -1713,7 +1733,7 @@
           "count": 1
         },
         {
-          "label": "personvalg | Hvem kan stille op?",
+          "label": "personvalg | Hvem kan stemme til personvalget?",
           "count": 1
         },
         {
@@ -1721,23 +1741,15 @@
           "count": 1
         },
         {
-          "label": "personvalg | Hvornår er der valg?",
-          "count": 1
-        },
-        {
           "label": "personvalg | Skal jeg deltage på GF27 – generalforsamlingen, hvis jeg vil stille op?",
           "count": 1
         },
         {
-          "label": "program | Hvor finder jeg program og mødemateriale?",
+          "label": "program | Skal jeg bruge en app under generalforsamlingen?",
           "count": 1
         },
         {
           "label": "tilmelding | Hvem kan deltage?",
-          "count": 1
-        },
-        {
-          "label": "tilmelding | Hvordan tilmelder jeg mig?",
           "count": 1
         },
         {
@@ -1756,7 +1768,7 @@
       "scroll": [
         {
           "label": "Scrollhændelser (uden dybde)",
-          "count": 21
+          "count": 36
         }
       ]
     }
