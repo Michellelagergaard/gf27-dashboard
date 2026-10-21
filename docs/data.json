@@ -1,7 +1,7 @@
 {
   "source": "matomo",
   "extractorVersion": 3,
-  "updatedAt": "2026-10-21T11:42:24.861Z",
+  "updatedAt": "2026-10-21T18:38:29.569Z",
   "days": [
     {
       "date": "2026-09-01",
@@ -1774,20 +1774,68 @@
     },
     {
       "date": "2026-10-21",
-      "views": 4,
-      "visits": 4,
-      "visitors": 4,
-      "clicks": 0,
+      "views": 9,
+      "visits": 6,
+      "visitors": 6,
+      "clicks": 1,
       "section": [
         {
           "label": "Sektionsklik (uden sektionsnavn)",
-          "count": 5
+          "count": 7
         }
       ],
       "faq": [
         {
           "label": "tid | Hvornår og hvor holdes generalforsamlingen GF27?",
+          "count": 3
+        },
+        {
+          "label": "personvalg | Er arbejdet honoreret?",
           "count": 2
+        },
+        {
+          "label": "personvalg | Hvad beskæftiger bestyrelsen sig med?",
+          "count": 2
+        },
+        {
+          "label": "personvalg | Hvem kan stille op?",
+          "count": 3
+        },
+        {
+          "label": "personvalg | Hvilke poster kan jeg stille op til?",
+          "count": 2
+        },
+        {
+          "label": "personvalg | Hvor meget tid kræver det?",
+          "count": 2
+        },
+        {
+          "label": "personvalg | Skal jeg deltage på GF27 – generalforsamlingen, hvis jeg vil stille op?",
+          "count": 3
+        },
+        {
+          "label": "personvalg | Skal jeg have erfaring med bestyrelsesarbejde?",
+          "count": 2
+        },
+        {
+          "label": "program | Skal jeg bruge en app under generalforsamlingen?",
+          "count": 2
+        },
+        {
+          "label": "tilmelding | Hvordan tilmelder jeg mig?",
+          "count": 2
+        },
+        {
+          "label": "transport | Hvilke udgifter kan jeg få refunderet?",
+          "count": 2
+        },
+        {
+          "label": "transport | Hvordan booker jeg overnatning?",
+          "count": 4
+        },
+        {
+          "label": "transport | Kan jeg dele et hotelværelse med en anden deltager?",
+          "count": 4
         },
         {
           "label": "mad | Er der adgang for medlemmer med særlige behov?",
@@ -1798,39 +1846,15 @@
           "count": 1
         },
         {
-          "label": "personvalg | Er arbejdet honoreret?",
+          "label": "personvalg | Hvem kan stemme til personvalget?",
           "count": 1
         },
         {
-          "label": "personvalg | Hvad beskæftiger bestyrelsen sig med?",
-          "count": 1
-        },
-        {
-          "label": "personvalg | Hvem kan stille op?",
-          "count": 1
-        },
-        {
-          "label": "personvalg | Hvilke poster kan jeg stille op til?",
-          "count": 1
-        },
-        {
-          "label": "personvalg | Hvor meget tid kræver det?",
-          "count": 1
-        },
-        {
-          "label": "personvalg | Skal jeg deltage på GF27 – generalforsamlingen, hvis jeg vil stille op?",
-          "count": 1
-        },
-        {
-          "label": "personvalg | Skal jeg have erfaring med bestyrelsesarbejde?",
+          "label": "personvalg | Hvornår er der valg?",
           "count": 1
         },
         {
           "label": "program | Hvor finder jeg program og mødemateriale?",
-          "count": 1
-        },
-        {
-          "label": "program | Skal jeg bruge en app under generalforsamlingen?",
           "count": 1
         },
         {
@@ -1846,7 +1870,7 @@
           "count": 1
         },
         {
-          "label": "tilmelding | Hvordan tilmelder jeg mig?",
+          "label": "tilmelding | Hvordan melder jeg afbud, hvis jeg ikke deltager alligevel?",
           "count": 1
         },
         {
@@ -1854,22 +1878,14 @@
           "count": 1
         },
         {
-          "label": "transport | Hvilke udgifter kan jeg få refunderet?",
-          "count": 1
-        },
-        {
-          "label": "transport | Hvordan booker jeg overnatning?",
-          "count": 1
-        },
-        {
-          "label": "transport | Kan jeg dele et hotelværelse med en anden deltager?",
+          "label": "transport | Hvordan kommer jeg til generalforsamlingen?",
           "count": 1
         }
       ],
       "scroll": [
         {
           "label": "Scrollhændelser (uden dybde)",
-          "count": 12
+          "count": 22
         }
       ]
     }
