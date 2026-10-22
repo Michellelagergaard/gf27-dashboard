@@ -1,7 +1,7 @@
 {
   "source": "matomo",
   "extractorVersion": 3,
-  "updatedAt": "2026-10-21T18:38:29.569Z",
+  "updatedAt": "2026-10-22T11:45:37.714Z",
   "days": [
     {
       "date": "2026-09-01",
@@ -1774,10 +1774,10 @@
     },
     {
       "date": "2026-10-21",
-      "views": 9,
-      "visits": 6,
-      "visitors": 6,
-      "clicks": 1,
+      "views": 10,
+      "visits": 7,
+      "visitors": 7,
+      "clicks": 2,
       "section": [
         {
           "label": "Sektionsklik (uden sektionsnavn)",
@@ -1787,7 +1787,7 @@
       "faq": [
         {
           "label": "tid | Hvornår og hvor holdes generalforsamlingen GF27?",
-          "count": 3
+          "count": 4
         },
         {
           "label": "personvalg | Er arbejdet honoreret?",
@@ -1819,6 +1819,10 @@
         },
         {
           "label": "program | Skal jeg bruge en app under generalforsamlingen?",
+          "count": 2
+        },
+        {
+          "label": "tid | Hvad koster det at deltage?",
           "count": 2
         },
         {
@@ -1858,8 +1862,12 @@
           "count": 1
         },
         {
-          "label": "tid | Hvad koster det at deltage?",
+          "label": "tid | Hvornår begynder generalforsamlingen?",
           "count": 1
+        },
+        {
+          "label": "tilmelding | Hvem kan deltage?",
+          "count": 2
         },
         {
           "label": "tilmelding | Hvordan kan jeg deltage, hvis de fysiske pladser bliver udsolgt?",
@@ -1885,9 +1893,19 @@
       "scroll": [
         {
           "label": "Scrollhændelser (uden dybde)",
-          "count": 22
+          "count": 23
         }
       ]
+    },
+    {
+      "date": "2026-10-22",
+      "views": 1,
+      "visits": 1,
+      "visitors": 1,
+      "clicks": 0,
+      "section": [],
+      "faq": [],
+      "scroll": []
     }
   ]
 }
