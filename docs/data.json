@@ -1,7 +1,7 @@
 {
   "source": "matomo",
   "extractorVersion": 3,
-  "updatedAt": "2026-10-23T18:20:27.104Z",
+  "updatedAt": "2026-10-24T10:52:43.081Z",
   "days": [
     {
       "date": "2026-09-01",
@@ -2048,23 +2048,35 @@
     },
     {
       "date": "2026-10-23",
-      "views": 7,
-      "visits": 7,
-      "visitors": 7,
-      "clicks": 3,
+      "views": 13,
+      "visits": 13,
+      "visitors": 11,
+      "clicks": 4,
       "section": [
         {
           "label": "Sektionsklik (uden sektionsnavn)",
-          "count": 3
+          "count": 6
         }
       ],
       "faq": [
         {
           "label": "program | Hvor finder jeg program og mødemateriale?",
-          "count": 4
+          "count": 5
+        },
+        {
+          "label": "personvalg | Er arbejdet honoreret?",
+          "count": 3
         },
         {
           "label": "tid | Hvad koster det at deltage?",
+          "count": 3
+        },
+        {
+          "label": "tilmelding | Hvem kan deltage?",
+          "count": 3
+        },
+        {
+          "label": "transport | Hvordan kommer jeg til generalforsamlingen?",
           "count": 3
         },
         {
@@ -2072,7 +2084,27 @@
           "count": 2
         },
         {
-          "label": "personvalg | Er arbejdet honoreret?",
+          "label": "personvalg | Hvad beskæftiger bestyrelsen sig med?",
+          "count": 2
+        },
+        {
+          "label": "personvalg | Hvem kan stemme til personvalget?",
+          "count": 2
+        },
+        {
+          "label": "personvalg | Hvilke poster kan jeg stille op til?",
+          "count": 2
+        },
+        {
+          "label": "personvalg | Hvor meget tid kræver det?",
+          "count": 2
+        },
+        {
+          "label": "program | Hvordan får jeg teknisk hjælp?",
+          "count": 2
+        },
+        {
+          "label": "program | Skal jeg bruge en app under generalforsamlingen?",
           "count": 2
         },
         {
@@ -2081,10 +2113,6 @@
         },
         {
           "label": "tid | Hvornår og hvor holdes generalforsamlingen GF27?",
-          "count": 2
-        },
-        {
-          "label": "tilmelding | Hvem kan deltage?",
           "count": 2
         },
         {
@@ -2112,7 +2140,7 @@
           "count": 2
         },
         {
-          "label": "transport | Hvordan kommer jeg til generalforsamlingen?",
+          "label": "transport | Hvilke udgifter kan jeg få refunderet?",
           "count": 2
         },
         {
@@ -2120,19 +2148,15 @@
           "count": 1
         },
         {
-          "label": "personvalg | Hvad beskæftiger bestyrelsen sig med?",
+          "label": "personvalg | Hvem kan stille op?",
           "count": 1
         },
         {
-          "label": "personvalg | Hvem kan stemme til personvalget?",
+          "label": "personvalg | Hvornår er der valg?",
           "count": 1
         },
         {
-          "label": "personvalg | Hvilke poster kan jeg stille op til?",
-          "count": 1
-        },
-        {
-          "label": "personvalg | Hvor meget tid kræver det?",
+          "label": "personvalg | Skal jeg deltage på GF27 – generalforsamlingen, hvis jeg vil stille op?",
           "count": 1
         },
         {
@@ -2140,19 +2164,7 @@
           "count": 1
         },
         {
-          "label": "program | Hvordan får jeg teknisk hjælp?",
-          "count": 1
-        },
-        {
-          "label": "program | Skal jeg bruge en app under generalforsamlingen?",
-          "count": 1
-        },
-        {
           "label": "tilmelding | Jeg kan ikke deltage, men vil gerne give en fuldmagt til en anden. Hvordan gør jeg?",
-          "count": 1
-        },
-        {
-          "label": "transport | Hvilke udgifter kan jeg få refunderet?",
           "count": 1
         },
         {
@@ -2171,9 +2183,19 @@
       "scroll": [
         {
           "label": "Scrollhændelser (uden dybde)",
-          "count": 13
+          "count": 31
         }
       ]
+    },
+    {
+      "date": "2026-10-24",
+      "views": 0,
+      "visits": 0,
+      "visitors": 0,
+      "clicks": 0,
+      "section": [],
+      "faq": [],
+      "scroll": []
     }
   ]
 }
