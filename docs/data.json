@@ -1,7 +1,7 @@
 {
   "source": "matomo",
   "extractorVersion": 3,
-  "updatedAt": "2026-10-24T17:27:09.054Z",
+  "updatedAt": "2026-10-25T11:19:28.168Z",
   "days": [
     {
       "date": "2026-09-01",
@@ -2189,62 +2189,79 @@
     },
     {
       "date": "2026-10-24",
-      "views": 4,
-      "visits": 3,
-      "visitors": 2,
-      "clicks": 1,
-      "section": [],
+      "views": 6,
+      "visits": 5,
+      "visitors": 3,
+      "clicks": 2,
+      "section": [
+        {
+          "label": "Sektionsklik (uden sektionsnavn)",
+          "count": 2
+        }
+      ],
       "faq": [
         {
           "label": "personvalg | Er arbejdet honoreret?",
-          "count": 2
+          "count": 3
         },
         {
           "label": "personvalg | Hvad beskæftiger bestyrelsen sig med?",
-          "count": 1
+          "count": 2
+        },
+        {
+          "label": "personvalg | Hvem kan stemme til personvalget?",
+          "count": 2
+        },
+        {
+          "label": "personvalg | Hvem kan stille op?",
+          "count": 2
+        },
+        {
+          "label": "personvalg | Hvilke poster kan jeg stille op til?",
+          "count": 2
+        },
+        {
+          "label": "personvalg | Hvor meget tid kræver det?",
+          "count": 2
+        },
+        {
+          "label": "personvalg | Hvornår er der valg?",
+          "count": 2
+        },
+        {
+          "label": "personvalg | Skal jeg deltage på GF27 – generalforsamlingen, hvis jeg vil stille op?",
+          "count": 2
+        },
+        {
+          "label": "personvalg | Skal jeg have erfaring med bestyrelsesarbejde?",
+          "count": 2
+        },
+        {
+          "label": "program | Hvor finder jeg program og mødemateriale?",
+          "count": 2
+        },
+        {
+          "label": "tid | Hvornår begynder generalforsamlingen?",
+          "count": 2
+        },
+        {
+          "label": "tilmelding | Hvordan kan jeg deltage i generalforsamlingen?",
+          "count": 3
+        },
+        {
+          "label": "tilmelding | Hvornår er der sidste frist for tilmelding og ændringer?",
+          "count": 2
         },
         {
           "label": "personvalg | Hvad beskæftiger Komité for Etik sig med?",
           "count": 1
         },
         {
-          "label": "personvalg | Hvem kan stemme til personvalget?",
-          "count": 1
-        },
-        {
-          "label": "personvalg | Hvem kan stille op?",
-          "count": 1
-        },
-        {
-          "label": "personvalg | Hvilke poster kan jeg stille op til?",
-          "count": 1
-        },
-        {
-          "label": "personvalg | Hvor meget tid kræver det?",
-          "count": 1
-        },
-        {
-          "label": "personvalg | Hvornår er der valg?",
-          "count": 1
-        },
-        {
-          "label": "personvalg | Skal jeg deltage på GF27 – generalforsamlingen, hvis jeg vil stille op?",
-          "count": 1
-        },
-        {
-          "label": "personvalg | Skal jeg have erfaring med bestyrelsesarbejde?",
-          "count": 1
-        },
-        {
-          "label": "program | Hvor finder jeg program og mødemateriale?",
+          "label": "program | Skal jeg bruge en app under generalforsamlingen?",
           "count": 1
         },
         {
           "label": "tid | Hvad koster det at deltage?",
-          "count": 1
-        },
-        {
-          "label": "tid | Hvornår begynder generalforsamlingen?",
           "count": 1
         },
         {
@@ -2256,11 +2273,15 @@
           "count": 1
         },
         {
-          "label": "tilmelding | Hvordan kan jeg deltage i generalforsamlingen?",
+          "label": "tilmelding | Hvordan melder jeg afbud, hvis jeg ikke deltager alligevel?",
           "count": 1
         },
         {
-          "label": "tilmelding | Hvornår er der sidste frist for tilmelding og ændringer?",
+          "label": "tilmelding | Hvordan tilmelder jeg mig?",
+          "count": 1
+        },
+        {
+          "label": "tilmelding | Hvordan ændrer jeg min tilmelding?",
           "count": 1
         },
         {
@@ -2275,9 +2296,19 @@
       "scroll": [
         {
           "label": "Scrollhændelser (uden dybde)",
-          "count": 8
+          "count": 15
         }
       ]
+    },
+    {
+      "date": "2026-10-25",
+      "views": 0,
+      "visits": 0,
+      "visitors": 0,
+      "clicks": 0,
+      "section": [],
+      "faq": [],
+      "scroll": []
     }
   ]
 }
