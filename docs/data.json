@@ -1,7 +1,7 @@
 {
   "source": "matomo",
   "extractorVersion": 3,
-  "updatedAt": "2026-10-26T19:56:42.713Z",
+  "updatedAt": "2026-10-27T12:04:55.384Z",
   "days": [
     {
       "date": "2026-09-01",
@@ -2327,13 +2327,101 @@
     },
     {
       "date": "2026-10-26",
-      "views": 4,
-      "visits": 4,
-      "visitors": 4,
+      "views": 11,
+      "visits": 9,
+      "visitors": 8,
       "clicks": 2,
-      "section": [],
-      "faq": [],
-      "scroll": []
+      "section": [
+        {
+          "label": "Sektionsklik (uden sektionsnavn)",
+          "count": 2
+        }
+      ],
+      "faq": [
+        {
+          "label": "transport | Hvordan booker jeg overnatning?",
+          "count": 2
+        },
+        {
+          "label": "personvalg | Er arbejdet honoreret?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Hvem kan stemme til personvalget?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Hvem kan stille op?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Hvilken opgave har en kritisk revisor?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Hvilke poster kan jeg stille op til?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Hvor meget tid kræver det?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Hvornår er der valg?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Skal jeg deltage på GF27 – generalforsamlingen, hvis jeg vil stille op?",
+          "count": 1
+        },
+        {
+          "label": "program | Hvor finder jeg program og mødemateriale?",
+          "count": 1
+        },
+        {
+          "label": "transport | Hvilke udgifter kan jeg få refunderet?",
+          "count": 1
+        },
+        {
+          "label": "transport | Kan jeg dele et hotelværelse med en anden deltager?",
+          "count": 1
+        }
+      ],
+      "scroll": [
+        {
+          "label": "Scrollhændelser (uden dybde)",
+          "count": 11
+        }
+      ]
+    },
+    {
+      "date": "2026-10-27",
+      "views": 3,
+      "visits": 3,
+      "visitors": 3,
+      "clicks": 0,
+      "section": [
+        {
+          "label": "Sektionsklik (uden sektionsnavn)",
+          "count": 1
+        }
+      ],
+      "faq": [
+        {
+          "label": "program | Hvor finder jeg program og mødemateriale?",
+          "count": 1
+        },
+        {
+          "label": "tid | Hvornår og hvor holdes generalforsamlingen GF27?",
+          "count": 1
+        }
+      ],
+      "scroll": [
+        {
+          "label": "Scrollhændelser (uden dybde)",
+          "count": 3
+        }
+      ]
     }
   ]
 }
