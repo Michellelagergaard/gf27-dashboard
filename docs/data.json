@@ -1,7 +1,7 @@
 {
   "source": "matomo",
   "extractorVersion": 3,
-  "updatedAt": "2026-10-27T19:25:55.873Z",
+  "updatedAt": "2026-10-28T12:45:26.951Z",
   "days": [
     {
       "date": "2026-09-01",
@@ -2396,32 +2396,78 @@
     },
     {
       "date": "2026-10-27",
-      "views": 8,
-      "visits": 7,
-      "visitors": 7,
-      "clicks": 2,
+      "views": 10,
+      "visits": 9,
+      "visitors": 9,
+      "clicks": 3,
       "section": [
         {
           "label": "Sektionsklik (uden sektionsnavn)",
-          "count": 2
+          "count": 3
         }
       ],
       "faq": [
         {
           "label": "program | Hvor finder jeg program og mødemateriale?",
-          "count": 2
+          "count": 3
         },
         {
           "label": "tid | Hvornår og hvor holdes generalforsamlingen GF27?",
+          "count": 2
+        },
+        {
+          "label": "program | Hvordan får jeg teknisk hjælp?",
+          "count": 1
+        },
+        {
+          "label": "program | Skal jeg bruge en app under generalforsamlingen?",
+          "count": 1
+        },
+        {
+          "label": "tid | Hvad koster det at deltage?",
+          "count": 1
+        },
+        {
+          "label": "tid | Hvornår begynder generalforsamlingen?",
+          "count": 1
+        },
+        {
+          "label": "tilmelding | Hvem kan deltage?",
+          "count": 1
+        },
+        {
+          "label": "tilmelding | Hvordan melder jeg afbud, hvis jeg ikke deltager alligevel?",
+          "count": 1
+        },
+        {
+          "label": "tilmelding | Hvordan tilmelder jeg mig?",
+          "count": 1
+        },
+        {
+          "label": "tilmelding | Hvordan ændrer jeg min tilmelding?",
+          "count": 1
+        },
+        {
+          "label": "tilmelding | Hvornår er der sidste frist for tilmelding og ændringer?",
           "count": 1
         }
       ],
       "scroll": [
         {
           "label": "Scrollhændelser (uden dybde)",
-          "count": 9
+          "count": 13
         }
       ]
+    },
+    {
+      "date": "2026-10-28",
+      "views": 0,
+      "visits": 0,
+      "visitors": 0,
+      "clicks": 0,
+      "section": [],
+      "faq": [],
+      "scroll": []
     }
   ]
 }
