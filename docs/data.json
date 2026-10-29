@@ -1,7 +1,7 @@
 {
   "source": "matomo",
   "extractorVersion": 3,
-  "updatedAt": "2026-10-28T19:33:49.222Z",
+  "updatedAt": "2026-10-29T12:54:33.521Z",
   "days": [
     {
       "date": "2026-09-01",
@@ -2461,27 +2461,67 @@
     },
     {
       "date": "2026-10-28",
-      "views": 82,
-      "visits": 48,
-      "visitors": 44,
-      "clicks": 3,
+      "views": 193,
+      "visits": 116,
+      "visitors": 97,
+      "clicks": 4,
       "section": [
         {
           "label": "Sektionsklik (uden sektionsnavn)",
-          "count": 3
+          "count": 4
         }
       ],
       "faq": [
         {
+          "label": "personvalg | Er arbejdet honoreret?",
+          "count": 5
+        },
+        {
           "label": "tid | Hvad koster det at deltage?",
-          "count": 4
+          "count": 5
         },
         {
           "label": "tid | Hvornår og hvor holdes generalforsamlingen GF27?",
+          "count": 4
+        },
+        {
+          "label": "personvalg | Hvad beskæftiger bestyrelsen sig med?",
+          "count": 2
+        },
+        {
+          "label": "personvalg | Hvem kan stemme til personvalget?",
+          "count": 2
+        },
+        {
+          "label": "personvalg | Hvilke poster kan jeg stille op til?",
+          "count": 2
+        },
+        {
+          "label": "personvalg | Hvor meget tid kræver det?",
+          "count": 2
+        },
+        {
+          "label": "personvalg | Hvornår er der valg?",
           "count": 3
         },
         {
-          "label": "personvalg | Er arbejdet honoreret?",
+          "label": "tilmelding | Hvem kan deltage?",
+          "count": 2
+        },
+        {
+          "label": "tilmelding | Hvordan kan jeg deltage, hvis de fysiske pladser bliver udsolgt?",
+          "count": 2
+        },
+        {
+          "label": "tilmelding | Hvordan kan jeg deltage i generalforsamlingen?",
+          "count": 2
+        },
+        {
+          "label": "tilmelding | Hvordan tilmelder jeg mig?",
+          "count": 2
+        },
+        {
+          "label": "tilmelding | Hvornår er der sidste frist for tilmelding og ændringer?",
           "count": 2
         },
         {
@@ -2489,15 +2529,11 @@
           "count": 1
         },
         {
-          "label": "personvalg | Hvad beskæftiger bestyrelsen sig med?",
-          "count": 1
-        },
-        {
           "label": "personvalg | Hvad beskæftiger Komité for Etik sig med?",
           "count": 1
         },
         {
-          "label": "personvalg | Hvem kan stemme til personvalget?",
+          "label": "personvalg | Hvem kan stille op?",
           "count": 1
         },
         {
@@ -2505,39 +2541,19 @@
           "count": 1
         },
         {
-          "label": "personvalg | Hvilke poster kan jeg stille op til?",
+          "label": "personvalg | Skal jeg deltage på GF27 – generalforsamlingen, hvis jeg vil stille op?",
           "count": 1
         },
         {
-          "label": "personvalg | Hvor meget tid kræver det?",
+          "label": "personvalg | Skal jeg have erfaring med bestyrelsesarbejde?",
           "count": 1
-        },
-        {
-          "label": "personvalg | Hvornår er der valg?",
-          "count": 2
         },
         {
           "label": "tid | Hvornår begynder generalforsamlingen?",
           "count": 1
         },
         {
-          "label": "tilmelding | Hvem kan deltage?",
-          "count": 1
-        },
-        {
-          "label": "tilmelding | Hvordan kan jeg deltage, hvis de fysiske pladser bliver udsolgt?",
-          "count": 1
-        },
-        {
-          "label": "tilmelding | Hvordan kan jeg deltage i generalforsamlingen?",
-          "count": 1
-        },
-        {
-          "label": "tilmelding | Hvordan tilmelder jeg mig?",
-          "count": 1
-        },
-        {
-          "label": "tilmelding | Hvornår er der sidste frist for tilmelding og ændringer?",
+          "label": "tilmelding | Hvordan ændrer jeg min tilmelding?",
           "count": 1
         },
         {
@@ -2552,9 +2568,19 @@
       "scroll": [
         {
           "label": "Scrollhændelser (uden dybde)",
-          "count": 20
+          "count": 32
         }
       ]
+    },
+    {
+      "date": "2026-10-29",
+      "views": 7,
+      "visits": 4,
+      "visitors": 4,
+      "clicks": 0,
+      "section": [],
+      "faq": [],
+      "scroll": []
     }
   ]
 }
