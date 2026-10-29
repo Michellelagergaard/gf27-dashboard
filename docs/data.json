@@ -1,7 +1,7 @@
 {
   "source": "matomo",
   "extractorVersion": 3,
-  "updatedAt": "2026-10-29T12:54:33.521Z",
+  "updatedAt": "2026-10-29T19:37:35.534Z",
   "days": [
     {
       "date": "2026-09-01",
@@ -2574,13 +2574,72 @@
     },
     {
       "date": "2026-10-29",
-      "views": 7,
-      "visits": 4,
-      "visitors": 4,
+      "views": 30,
+      "visits": 21,
+      "visitors": 20,
       "clicks": 0,
-      "section": [],
-      "faq": [],
-      "scroll": []
+      "section": [
+        {
+          "label": "Sektionsklik (uden sektionsnavn)",
+          "count": 3
+        }
+      ],
+      "faq": [
+        {
+          "label": "transport | Hvordan booker jeg overnatning?",
+          "count": 2
+        },
+        {
+          "label": "mad | Er der mad og drikke til generalforsamlingen?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Er arbejdet honoreret?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Hvad beskæftiger bestyrelsen sig med?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Hvem kan stemme til personvalget?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Hvem kan stille op?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Hvor meget tid kræver det?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Hvornår er der valg?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Skal jeg have erfaring med bestyrelsesarbejde?",
+          "count": 1
+        },
+        {
+          "label": "program | Hvor finder jeg program og mødemateriale?",
+          "count": 1
+        },
+        {
+          "label": "tid | Hvornår og hvor holdes generalforsamlingen GF27?",
+          "count": 2
+        },
+        {
+          "label": "transport | Hvilke udgifter kan jeg få refunderet?",
+          "count": 1
+        }
+      ],
+      "scroll": [
+        {
+          "label": "Scrollhændelser (uden dybde)",
+          "count": 12
+        }
+      ]
     }
   ]
 }
