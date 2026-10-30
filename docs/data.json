@@ -1,7 +1,7 @@
 {
   "source": "matomo",
   "extractorVersion": 3,
-  "updatedAt": "2026-10-30T12:47:32.064Z",
+  "updatedAt": "2026-10-30T19:21:10.788Z",
   "days": [
     {
       "date": "2026-09-01",
@@ -2703,29 +2703,77 @@
     },
     {
       "date": "2026-10-30",
-      "views": 2,
-      "visits": 2,
-      "visitors": 2,
+      "views": 13,
+      "visits": 10,
+      "visitors": 10,
       "clicks": 0,
       "section": [],
       "faq": [
         {
           "label": "personvalg | Hvem kan stille op?",
-          "count": 1
+          "count": 2
         },
         {
           "label": "personvalg | Hvilke poster kan jeg stille op til?",
-          "count": 1
+          "count": 2
         },
         {
           "label": "personvalg | Skal jeg deltage på GF27 – generalforsamlingen, hvis jeg vil stille op?",
+          "count": 2
+        },
+        {
+          "label": "mad | Er der mad og drikke til generalforsamlingen?",
+          "count": 2
+        },
+        {
+          "label": "personvalg | Er arbejdet honoreret?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Hvad beskæftiger bestyrelsen sig med?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Hvad beskæftiger Komité for Etik sig med?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Hvem kan stemme til personvalget?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Hvilken opgave har en kritisk revisor?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Hvor meget tid kræver det?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Hvornår er der valg?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Skal jeg have erfaring med bestyrelsesarbejde?",
+          "count": 1
+        },
+        {
+          "label": "tid | Hvornår og hvor holdes generalforsamlingen GF27?",
+          "count": 1
+        },
+        {
+          "label": "tilmelding | Hvordan tilmelder jeg mig?",
+          "count": 1
+        },
+        {
+          "label": "transport | Kan jeg dele et hotelværelse med en anden deltager?",
           "count": 1
         }
       ],
       "scroll": [
         {
           "label": "Scrollhændelser (uden dybde)",
-          "count": 4
+          "count": 12
         }
       ]
     }
