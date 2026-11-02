@@ -1,7 +1,7 @@
 {
   "source": "matomo",
   "extractorVersion": 3,
-  "updatedAt": "2026-11-02T15:41:14.214Z",
+  "updatedAt": "2026-11-02T22:46:31.247Z",
   "days": [
     {
       "date": "2026-09-01",
@@ -2872,28 +2872,28 @@
     },
     {
       "date": "2026-11-02",
-      "views": 21,
-      "visits": 15,
-      "visitors": 14,
-      "clicks": 4,
+      "views": 27,
+      "visits": 21,
+      "visitors": 20,
+      "clicks": 5,
       "section": [
         {
           "label": "Sektionsklik (uden sektionsnavn)",
-          "count": 6
+          "count": 7
         }
       ],
       "faq": [
         {
           "label": "tid | Hvad koster det at deltage?",
-          "count": 2
+          "count": 3
         },
         {
           "label": "tid | Hvornår begynder generalforsamlingen?",
-          "count": 2
+          "count": 3
         },
         {
           "label": "tid | Hvornår og hvor holdes generalforsamlingen GF27?",
-          "count": 2
+          "count": 3
         },
         {
           "label": "tilmelding | Hvordan kan jeg deltage, hvis de fysiske pladser bliver udsolgt?",
@@ -2976,6 +2976,10 @@
           "count": 1
         },
         {
+          "label": "transport | Hvordan booker jeg overnatning?",
+          "count": 1
+        },
+        {
           "label": "transport | Hvordan kommer jeg til generalforsamlingen?",
           "count": 1
         }
@@ -2983,7 +2987,7 @@
       "scroll": [
         {
           "label": "Scrollhændelser (uden dybde)",
-          "count": 17
+          "count": 20
         }
       ]
     }
