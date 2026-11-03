@@ -1,7 +1,7 @@
 {
   "source": "matomo",
   "extractorVersion": 3,
-  "updatedAt": "2026-11-02T22:46:31.247Z",
+  "updatedAt": "2026-11-03T14:05:19.324Z",
   "days": [
     {
       "date": "2026-09-01",
@@ -2872,9 +2872,9 @@
     },
     {
       "date": "2026-11-02",
-      "views": 27,
-      "visits": 21,
-      "visitors": 20,
+      "views": 28,
+      "visits": 19,
+      "visitors": 17,
       "clicks": 5,
       "section": [
         {
@@ -2988,6 +2988,58 @@
         {
           "label": "Scrollhændelser (uden dybde)",
           "count": 20
+        }
+      ]
+    },
+    {
+      "date": "2026-11-03",
+      "views": 5,
+      "visits": 4,
+      "visitors": 4,
+      "clicks": 1,
+      "section": [],
+      "faq": [
+        {
+          "label": "mad | Er der mad og drikke til generalforsamlingen?",
+          "count": 1
+        },
+        {
+          "label": "program | Hvor finder jeg program og mødemateriale?",
+          "count": 1
+        },
+        {
+          "label": "program | Skal jeg bruge en app under generalforsamlingen?",
+          "count": 1
+        },
+        {
+          "label": "tid | Hvornår og hvor holdes generalforsamlingen GF27?",
+          "count": 1
+        },
+        {
+          "label": "tilmelding | Jeg kan ikke deltage, men vil gerne give en fuldmagt til en anden. Hvordan gør jeg?",
+          "count": 1
+        },
+        {
+          "label": "transport | Hvilke udgifter kan jeg få refunderet?",
+          "count": 1
+        },
+        {
+          "label": "transport | Hvordan booker jeg overnatning?",
+          "count": 1
+        },
+        {
+          "label": "transport | Hvordan kommer jeg til generalforsamlingen?",
+          "count": 1
+        },
+        {
+          "label": "transport | Kan jeg dele et hotelværelse med en anden deltager?",
+          "count": 1
+        }
+      ],
+      "scroll": [
+        {
+          "label": "Scrollhændelser (uden dybde)",
+          "count": 3
         }
       ]
     }
