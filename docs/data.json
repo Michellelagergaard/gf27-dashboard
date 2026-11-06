@@ -1,7 +1,7 @@
 {
   "source": "matomo",
   "extractorVersion": 3,
-  "updatedAt": "2026-11-05T21:05:13.607Z",
+  "updatedAt": "2026-11-06T14:11:12.065Z",
   "days": [
     {
       "date": "2026-09-01",
@@ -3090,9 +3090,9 @@
     },
     {
       "date": "2026-11-05",
-      "views": 57,
-      "visits": 40,
-      "visitors": 38,
+      "views": 59,
+      "visits": 39,
+      "visitors": 36,
       "clicks": 1,
       "section": [
         {
@@ -3126,6 +3126,86 @@
         {
           "label": "Scrollhændelser (uden dybde)",
           "count": 15
+        }
+      ]
+    },
+    {
+      "date": "2026-11-06",
+      "views": 19,
+      "visits": 18,
+      "visitors": 17,
+      "clicks": 0,
+      "section": [],
+      "faq": [
+        {
+          "label": "personvalg | Er arbejdet honoreret?",
+          "count": 2
+        },
+        {
+          "label": "personvalg | Hvilke poster kan jeg stille op til?",
+          "count": 2
+        },
+        {
+          "label": "mad | Er der mad og drikke til generalforsamlingen?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Hvad beskæftiger bestyrelsen sig med?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Hvem kan stemme til personvalget?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Hvem kan stille op?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Hvilken opgave har en kritisk revisor?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Hvor meget tid kræver det?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Hvornår er der valg?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Skal jeg deltage på GF27 – generalforsamlingen, hvis jeg vil stille op?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Skal jeg have erfaring med bestyrelsesarbejde?",
+          "count": 1
+        },
+        {
+          "label": "tid | Hvad koster det at deltage?",
+          "count": 1
+        },
+        {
+          "label": "tilmelding | Hvornår er der sidste frist for tilmelding og ændringer?",
+          "count": 1
+        },
+        {
+          "label": "transport | Hvilke udgifter kan jeg få refunderet?",
+          "count": 1
+        },
+        {
+          "label": "transport | Hvordan kommer jeg til generalforsamlingen?",
+          "count": 1
+        },
+        {
+          "label": "transport | Kan jeg dele et hotelværelse med en anden deltager?",
+          "count": 1
+        }
+      ],
+      "scroll": [
+        {
+          "label": "Scrollhændelser (uden dybde)",
+          "count": 8
         }
       ]
     }
