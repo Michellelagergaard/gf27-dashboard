@@ -1,7 +1,7 @@
 {
   "source": "matomo",
   "extractorVersion": 3,
-  "updatedAt": "2026-11-09T16:08:31.561Z",
+  "updatedAt": "2026-11-09T23:25:59.441Z",
   "days": [
     {
       "date": "2026-09-01",
@@ -3268,9 +3268,9 @@
     },
     {
       "date": "2026-11-09",
-      "views": 16,
-      "visits": 12,
-      "visitors": 11,
+      "views": 18,
+      "visits": 14,
+      "visitors": 13,
       "clicks": 2,
       "section": [
         {
@@ -3289,6 +3289,10 @@
         },
         {
           "label": "tilmelding | Hvordan tilmelder jeg mig?",
+          "count": 2
+        },
+        {
+          "label": "tilmelding | Hvornår er der sidste frist for tilmelding og ændringer?",
           "count": 2
         },
         {
@@ -3364,10 +3368,6 @@
           "count": 1
         },
         {
-          "label": "tilmelding | Hvornår er der sidste frist for tilmelding og ændringer?",
-          "count": 1
-        },
-        {
           "label": "tilmelding | Jeg kan ikke deltage, men vil gerne give en fuldmagt til en anden. Hvordan gør jeg?",
           "count": 1
         },
@@ -3391,9 +3391,19 @@
       "scroll": [
         {
           "label": "Scrollhændelser (uden dybde)",
-          "count": 9
+          "count": 11
         }
       ]
+    },
+    {
+      "date": "2026-11-10",
+      "views": 0,
+      "visits": 0,
+      "visitors": 0,
+      "clicks": 0,
+      "section": [],
+      "faq": [],
+      "scroll": []
     }
   ]
 }
