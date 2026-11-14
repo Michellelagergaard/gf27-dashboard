@@ -1,7 +1,7 @@
 {
   "source": "matomo",
   "extractorVersion": 3,
-  "updatedAt": "2026-11-13T20:53:49.646Z",
+  "updatedAt": "2026-11-14T13:26:27.616Z",
   "days": [
     {
       "date": "2026-09-01",
@@ -3547,8 +3547,8 @@
     {
       "date": "2026-11-13",
       "views": 15,
-      "visits": 13,
-      "visitors": 13,
+      "visits": 11,
+      "visitors": 11,
       "clicks": 2,
       "section": [
         {
@@ -3694,6 +3694,59 @@
         {
           "label": "Scrollhændelser (uden dybde)",
           "count": 7
+        }
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "views": 3,
+      "visits": 3,
+      "visitors": 3,
+      "clicks": 1,
+      "section": [
+        {
+          "label": "Sektionsklik (uden sektionsnavn)",
+          "count": 1
+        }
+      ],
+      "faq": [
+        {
+          "label": "tid | Hvad koster det at deltage?",
+          "count": 2
+        },
+        {
+          "label": "tid | Hvornår begynder generalforsamlingen?",
+          "count": 2
+        },
+        {
+          "label": "tid | Hvornår og hvor holdes generalforsamlingen GF27?",
+          "count": 2
+        },
+        {
+          "label": "tilmelding | Hvordan kan jeg deltage, hvis de fysiske pladser bliver udsolgt?",
+          "count": 2
+        },
+        {
+          "label": "program | Hvor finder jeg program og mødemateriale?",
+          "count": 1
+        },
+        {
+          "label": "tilmelding | Jeg kan ikke deltage, men vil gerne give en fuldmagt til en anden. Hvordan gør jeg?",
+          "count": 1
+        },
+        {
+          "label": "transport | Hvilke udgifter kan jeg få refunderet?",
+          "count": 1
+        },
+        {
+          "label": "transport | Hvordan booker jeg overnatning?",
+          "count": 1
+        }
+      ],
+      "scroll": [
+        {
+          "label": "Scrollhændelser (uden dybde)",
+          "count": 4
         }
       ]
     }
