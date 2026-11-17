@@ -1,7 +1,7 @@
 {
   "source": "matomo",
   "extractorVersion": 3,
-  "updatedAt": "2026-11-17T15:55:09.289Z",
+  "updatedAt": "2026-11-17T22:22:13.905Z",
   "days": [
     {
       "date": "2026-09-01",
@@ -3923,17 +3923,21 @@
     },
     {
       "date": "2026-11-17",
-      "views": 6,
-      "visits": 5,
-      "visitors": 5,
+      "views": 11,
+      "visits": 9,
+      "visitors": 7,
       "clicks": 3,
       "section": [
         {
           "label": "Sektionsklik (uden sektionsnavn)",
-          "count": 1
+          "count": 2
         }
       ],
       "faq": [
+        {
+          "label": "program | Hvor finder jeg program og mødemateriale?",
+          "count": 3
+        },
         {
           "label": "tid | Hvornår og hvor holdes generalforsamlingen GF27?",
           "count": 3
@@ -3974,7 +3978,7 @@
       "scroll": [
         {
           "label": "Scrollhændelser (uden dybde)",
-          "count": 7
+          "count": 23
         }
       ]
     }
