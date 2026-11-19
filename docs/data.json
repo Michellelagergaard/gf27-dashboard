@@ -1,7 +1,7 @@
 {
   "source": "matomo",
   "extractorVersion": 3,
-  "updatedAt": "2026-11-19T15:40:22.933Z",
+  "updatedAt": "2026-11-19T22:09:09.226Z",
   "days": [
     {
       "date": "2026-09-01",
@@ -4073,43 +4073,95 @@
     },
     {
       "date": "2026-11-19",
-      "views": 2,
-      "visits": 2,
-      "visitors": 2,
-      "clicks": 0,
+      "views": 15,
+      "visits": 15,
+      "visitors": 13,
+      "clicks": 1,
       "section": [
         {
           "label": "Sektionsklik (uden sektionsnavn)",
-          "count": 1
+          "count": 6
         }
       ],
       "faq": [
         {
-          "label": "transport | Hvilke udgifter kan jeg få refunderet?",
-          "count": 2
-        },
-        {
-          "label": "mad | Er der adgang for medlemmer med særlige behov?",
-          "count": 1
+          "label": "tid | Hvornår og hvor holdes generalforsamlingen GF27?",
+          "count": 7
         },
         {
           "label": "program | Hvor finder jeg program og mødemateriale?",
-          "count": 1
+          "count": 6
         },
         {
           "label": "tid | Hvad koster det at deltage?",
-          "count": 1
+          "count": 5
         },
         {
-          "label": "tid | Hvornår og hvor holdes generalforsamlingen GF27?",
-          "count": 1
+          "label": "tid | Hvornår begynder generalforsamlingen?",
+          "count": 6
+        },
+        {
+          "label": "transport | Hvilke udgifter kan jeg få refunderet?",
+          "count": 4
+        },
+        {
+          "label": "program | Skal jeg bruge en app under generalforsamlingen?",
+          "count": 3
+        },
+        {
+          "label": "tilmelding | Hvem kan deltage?",
+          "count": 3
         },
         {
           "label": "transport | Hvordan booker jeg overnatning?",
-          "count": 1
+          "count": 3
+        },
+        {
+          "label": "mad | Er der adgang for medlemmer med særlige behov?",
+          "count": 2
+        },
+        {
+          "label": "mad | Er der mad og drikke til generalforsamlingen?",
+          "count": 3
+        },
+        {
+          "label": "tilmelding | Hvordan kan jeg deltage i generalforsamlingen?",
+          "count": 2
+        },
+        {
+          "label": "tilmelding | Hvordan tilmelder jeg mig?",
+          "count": 2
+        },
+        {
+          "label": "tilmelding | Hvornår er der sidste frist for tilmelding og ændringer?",
+          "count": 2
         },
         {
           "label": "transport | Kan jeg dele et hotelværelse med en anden deltager?",
+          "count": 2
+        },
+        {
+          "label": "personvalg | Er arbejdet honoreret?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Hvornår er der valg?",
+          "count": 1
+        },
+        {
+          "label": "program | Hvordan får jeg teknisk hjælp?",
+          "count": 1
+        },
+        {
+          "label": "tilmelding | Hvordan kan jeg deltage, hvis de fysiske pladser bliver udsolgt?",
+          "count": 1
+        },
+        {
+          "label": "tilmelding | Hvordan melder jeg afbud, hvis jeg ikke deltager alligevel?",
+          "count": 2
+        },
+        {
+          "label": "tilmelding | Hvordan ændrer jeg min tilmelding?",
           "count": 1
         },
         {
@@ -4120,7 +4172,7 @@
       "scroll": [
         {
           "label": "Scrollhændelser (uden dybde)",
-          "count": 6
+          "count": 29
         }
       ]
     }
