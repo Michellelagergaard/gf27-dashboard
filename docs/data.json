@@ -1,7 +1,7 @@
 {
   "source": "matomo",
   "extractorVersion": 3,
-  "updatedAt": "2026-11-19T22:09:09.226Z",
+  "updatedAt": "2026-11-20T15:21:45.725Z",
   "days": [
     {
       "date": "2026-09-01",
@@ -4073,35 +4073,39 @@
     },
     {
       "date": "2026-11-19",
-      "views": 15,
-      "visits": 15,
-      "visitors": 13,
-      "clicks": 1,
+      "views": 20,
+      "visits": 19,
+      "visitors": 16,
+      "clicks": 2,
       "section": [
         {
           "label": "Sektionsklik (uden sektionsnavn)",
-          "count": 6
+          "count": 7
         }
       ],
       "faq": [
         {
           "label": "tid | Hvornår og hvor holdes generalforsamlingen GF27?",
-          "count": 7
+          "count": 9
+        },
+        {
+          "label": "tid | Hvad koster det at deltage?",
+          "count": 8
         },
         {
           "label": "program | Hvor finder jeg program og mødemateriale?",
           "count": 6
         },
         {
-          "label": "tid | Hvad koster det at deltage?",
-          "count": 5
-        },
-        {
           "label": "tid | Hvornår begynder generalforsamlingen?",
-          "count": 6
+          "count": 7
         },
         {
           "label": "transport | Hvilke udgifter kan jeg få refunderet?",
+          "count": 6
+        },
+        {
+          "label": "mad | Er der mad og drikke til generalforsamlingen?",
           "count": 4
         },
         {
@@ -4113,6 +4117,10 @@
           "count": 3
         },
         {
+          "label": "tilmelding | Hvornår er der sidste frist for tilmelding og ændringer?",
+          "count": 3
+        },
+        {
           "label": "transport | Hvordan booker jeg overnatning?",
           "count": 3
         },
@@ -4121,19 +4129,11 @@
           "count": 2
         },
         {
-          "label": "mad | Er der mad og drikke til generalforsamlingen?",
-          "count": 3
-        },
-        {
           "label": "tilmelding | Hvordan kan jeg deltage i generalforsamlingen?",
           "count": 2
         },
         {
           "label": "tilmelding | Hvordan tilmelder jeg mig?",
-          "count": 2
-        },
-        {
-          "label": "tilmelding | Hvornår er der sidste frist for tilmelding og ændringer?",
           "count": 2
         },
         {
@@ -4172,7 +4172,96 @@
       "scroll": [
         {
           "label": "Scrollhændelser (uden dybde)",
-          "count": 29
+          "count": 36
+        }
+      ]
+    },
+    {
+      "date": "2026-11-20",
+      "views": 19,
+      "visits": 11,
+      "visitors": 11,
+      "clicks": 8,
+      "section": [
+        {
+          "label": "Sektionsklik (uden sektionsnavn)",
+          "count": 9
+        }
+      ],
+      "faq": [
+        {
+          "label": "tid | Hvad koster det at deltage?",
+          "count": 6
+        },
+        {
+          "label": "tid | Hvornår og hvor holdes generalforsamlingen GF27?",
+          "count": 6
+        },
+        {
+          "label": "program | Hvor finder jeg program og mødemateriale?",
+          "count": 4
+        },
+        {
+          "label": "tid | Hvornår begynder generalforsamlingen?",
+          "count": 5
+        },
+        {
+          "label": "tilmelding | Hvordan tilmelder jeg mig?",
+          "count": 4
+        },
+        {
+          "label": "tilmelding | Hvem kan deltage?",
+          "count": 3
+        },
+        {
+          "label": "transport | Hvilke udgifter kan jeg få refunderet?",
+          "count": 3
+        },
+        {
+          "label": "mad | Er der mad og drikke til generalforsamlingen?",
+          "count": 2
+        },
+        {
+          "label": "tilmelding | Hvordan kan jeg deltage i generalforsamlingen?",
+          "count": 2
+        },
+        {
+          "label": "transport | Hvordan kommer jeg til generalforsamlingen?",
+          "count": 2
+        },
+        {
+          "label": "mad | Kan jeg oplade min computer eller telefon?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Hvornår er der valg?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Skal jeg deltage på GF27 – generalforsamlingen, hvis jeg vil stille op?",
+          "count": 1
+        },
+        {
+          "label": "program | Skal jeg bruge en app under generalforsamlingen?",
+          "count": 1
+        },
+        {
+          "label": "tilmelding | Hvordan kan jeg deltage, hvis de fysiske pladser bliver udsolgt?",
+          "count": 1
+        },
+        {
+          "label": "tilmelding | Hvornår er der sidste frist for tilmelding og ændringer?",
+          "count": 1
+        },
+        {
+          "label": "transport | Hvordan booker jeg overnatning?",
+          "count": 1
+        }
+      ],
+      "scroll": [
+        {
+          "label": "Scrollhændelser (uden dybde)",
+          "count": 27
         }
       ]
     }
