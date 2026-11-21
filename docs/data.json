@@ -1,7 +1,7 @@
 {
   "source": "matomo",
   "extractorVersion": 3,
-  "updatedAt": "2026-11-20T21:48:38.776Z",
+  "updatedAt": "2026-11-21T14:34:58.373Z",
   "days": [
     {
       "date": "2026-09-01",
@@ -4179,8 +4179,8 @@
     {
       "date": "2026-11-20",
       "views": 25,
-      "visits": 16,
-      "visitors": 15,
+      "visits": 15,
+      "visitors": 14,
       "clicks": 9,
       "section": [
         {
@@ -4266,6 +4266,21 @@
         {
           "label": "Scrollhændelser (uden dybde)",
           "count": 37
+        }
+      ]
+    },
+    {
+      "date": "2026-11-21",
+      "views": 2,
+      "visits": 2,
+      "visitors": 2,
+      "clicks": 0,
+      "section": [],
+      "faq": [],
+      "scroll": [
+        {
+          "label": "Scrollhændelser (uden dybde)",
+          "count": 4
         }
       ]
     }
