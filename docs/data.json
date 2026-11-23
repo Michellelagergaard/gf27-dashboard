@@ -1,7 +1,7 @@
 {
   "source": "matomo",
   "extractorVersion": 3,
-  "updatedAt": "2026-11-22T20:43:37.460Z",
+  "updatedAt": "2026-11-23T17:58:09.200Z",
   "days": [
     {
       "date": "2026-09-01",
@@ -4314,6 +4314,39 @@
         {
           "label": "Scrollhændelser (uden dybde)",
           "count": 3
+        }
+      ]
+    },
+    {
+      "date": "2026-11-23",
+      "views": 4,
+      "visits": 3,
+      "visitors": 3,
+      "clicks": 1,
+      "section": [
+        {
+          "label": "Sektionsklik (uden sektionsnavn)",
+          "count": 2
+        }
+      ],
+      "faq": [
+        {
+          "label": "tilmelding | Hvem kan deltage?",
+          "count": 1
+        },
+        {
+          "label": "tilmelding | Hvordan tilmelder jeg mig?",
+          "count": 1
+        },
+        {
+          "label": "transport | Hvordan booker jeg overnatning?",
+          "count": 1
+        }
+      ],
+      "scroll": [
+        {
+          "label": "Scrollhændelser (uden dybde)",
+          "count": 5
         }
       ]
     }
