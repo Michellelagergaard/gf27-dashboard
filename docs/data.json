@@ -1,7 +1,7 @@
 {
   "source": "matomo",
   "extractorVersion": 3,
-  "updatedAt": "2026-11-24T17:36:23.061Z",
+  "updatedAt": "2026-11-24T23:28:31.634Z",
   "days": [
     {
       "date": "2026-09-01",
@@ -4388,17 +4388,21 @@
     },
     {
       "date": "2026-11-24",
-      "views": 10,
-      "visits": 7,
-      "visitors": 7,
-      "clicks": 4,
+      "views": 18,
+      "visits": 12,
+      "visitors": 12,
+      "clicks": 7,
       "section": [
         {
           "label": "Sektionsklik (uden sektionsnavn)",
-          "count": 1
+          "count": 3
         }
       ],
       "faq": [
+        {
+          "label": "tilmelding | Hvordan tilmelder jeg mig?",
+          "count": 4
+        },
         {
           "label": "program | Hvor finder jeg program og mødemateriale?",
           "count": 2
@@ -4413,6 +4417,14 @@
         },
         {
           "label": "tid | Hvornår og hvor holdes generalforsamlingen GF27?",
+          "count": 2
+        },
+        {
+          "label": "tilmelding | Hvordan kan jeg deltage i generalforsamlingen?",
+          "count": 2
+        },
+        {
+          "label": "transport | Hvilke udgifter kan jeg få refunderet?",
           "count": 2
         },
         {
@@ -4436,32 +4448,30 @@
           "count": 1
         },
         {
-          "label": "tilmelding | Hvordan kan jeg deltage i generalforsamlingen?",
-          "count": 1
-        },
-        {
           "label": "tilmelding | Hvordan melder jeg afbud, hvis jeg ikke deltager alligevel?",
-          "count": 1
-        },
-        {
-          "label": "tilmelding | Hvordan tilmelder jeg mig?",
           "count": 1
         },
         {
           "label": "tilmelding | Hvordan ændrer jeg min tilmelding?",
           "count": 2
-        },
-        {
-          "label": "transport | Hvilke udgifter kan jeg få refunderet?",
-          "count": 1
         }
       ],
       "scroll": [
         {
           "label": "Scrollhændelser (uden dybde)",
-          "count": 9
+          "count": 14
         }
       ]
+    },
+    {
+      "date": "2026-11-25",
+      "views": 0,
+      "visits": 0,
+      "visitors": 0,
+      "clicks": 0,
+      "section": [],
+      "faq": [],
+      "scroll": []
     }
   ]
 }
