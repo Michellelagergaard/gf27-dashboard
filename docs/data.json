@@ -1,7 +1,7 @@
 {
   "source": "matomo",
   "extractorVersion": 3,
-  "updatedAt": "2026-11-24T01:40:09.805Z",
+  "updatedAt": "2026-11-24T17:36:23.061Z",
   "days": [
     {
       "date": "2026-09-01",
@@ -4388,13 +4388,80 @@
     },
     {
       "date": "2026-11-24",
-      "views": 1,
-      "visits": 1,
-      "visitors": 1,
-      "clicks": 1,
-      "section": [],
-      "faq": [],
-      "scroll": []
+      "views": 10,
+      "visits": 7,
+      "visitors": 7,
+      "clicks": 4,
+      "section": [
+        {
+          "label": "Sektionsklik (uden sektionsnavn)",
+          "count": 1
+        }
+      ],
+      "faq": [
+        {
+          "label": "program | Hvor finder jeg program og mødemateriale?",
+          "count": 2
+        },
+        {
+          "label": "tid | Hvad koster det at deltage?",
+          "count": 2
+        },
+        {
+          "label": "tid | Hvornår begynder generalforsamlingen?",
+          "count": 2
+        },
+        {
+          "label": "tid | Hvornår og hvor holdes generalforsamlingen GF27?",
+          "count": 2
+        },
+        {
+          "label": "mad | Er der mad og drikke til generalforsamlingen?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Hvor meget tid kræver det?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Hvornår er der valg?",
+          "count": 1
+        },
+        {
+          "label": "program | Skal jeg bruge en app under generalforsamlingen?",
+          "count": 2
+        },
+        {
+          "label": "tilmelding | Hvem kan deltage?",
+          "count": 1
+        },
+        {
+          "label": "tilmelding | Hvordan kan jeg deltage i generalforsamlingen?",
+          "count": 1
+        },
+        {
+          "label": "tilmelding | Hvordan melder jeg afbud, hvis jeg ikke deltager alligevel?",
+          "count": 1
+        },
+        {
+          "label": "tilmelding | Hvordan tilmelder jeg mig?",
+          "count": 1
+        },
+        {
+          "label": "tilmelding | Hvordan ændrer jeg min tilmelding?",
+          "count": 2
+        },
+        {
+          "label": "transport | Hvilke udgifter kan jeg få refunderet?",
+          "count": 1
+        }
+      ],
+      "scroll": [
+        {
+          "label": "Scrollhændelser (uden dybde)",
+          "count": 9
+        }
+      ]
     }
   ]
 }
