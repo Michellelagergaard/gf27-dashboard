@@ -1,7 +1,7 @@
 {
   "source": "matomo",
   "extractorVersion": 3,
-  "updatedAt": "2026-11-25T17:07:33.601Z",
+  "updatedAt": "2026-11-25T23:05:22.266Z",
   "days": [
     {
       "date": "2026-09-01",
@@ -4465,23 +4465,51 @@
     },
     {
       "date": "2026-11-25",
-      "views": 6,
-      "visits": 4,
-      "visitors": 4,
-      "clicks": 0,
+      "views": 25,
+      "visits": 16,
+      "visitors": 14,
+      "clicks": 2,
       "section": [
         {
           "label": "Sektionsklik (uden sektionsnavn)",
-          "count": 1
+          "count": 4
         }
       ],
       "faq": [
         {
           "label": "transport | Hvilke udgifter kan jeg få refunderet?",
-          "count": 2
+          "count": 5
         },
         {
           "label": "transport | Hvordan booker jeg overnatning?",
+          "count": 5
+        },
+        {
+          "label": "tid | Hvornår og hvor holdes generalforsamlingen GF27?",
+          "count": 4
+        },
+        {
+          "label": "program | Hvor finder jeg program og mødemateriale?",
+          "count": 3
+        },
+        {
+          "label": "tid | Hvad koster det at deltage?",
+          "count": 3
+        },
+        {
+          "label": "personvalg | Hvem kan stille op?",
+          "count": 2
+        },
+        {
+          "label": "personvalg | Hvor meget tid kræver det?",
+          "count": 2
+        },
+        {
+          "label": "personvalg | Hvornår er der valg?",
+          "count": 2
+        },
+        {
+          "label": "program | Skal jeg bruge en app under generalforsamlingen?",
           "count": 2
         },
         {
@@ -4493,7 +4521,11 @@
           "count": 1
         },
         {
-          "label": "personvalg | Hvor meget tid kræver det?",
+          "label": "personvalg | Er arbejdet honoreret?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Skal jeg have erfaring med bestyrelsesarbejde?",
           "count": 1
         },
         {
@@ -4501,11 +4533,7 @@
           "count": 1
         },
         {
-          "label": "program | Hvor finder jeg program og mødemateriale?",
-          "count": 1
-        },
-        {
-          "label": "program | Skal jeg bruge en app under generalforsamlingen?",
+          "label": "tid | Hvornår begynder generalforsamlingen?",
           "count": 1
         },
         {
@@ -4517,16 +4545,34 @@
           "count": 1
         },
         {
+          "label": "tilmelding | Hvordan tilmelder jeg mig?",
+          "count": 1
+        },
+        {
           "label": "tilmelding | Hvornår er der sidste frist for tilmelding og ændringer?",
+          "count": 1
+        },
+        {
+          "label": "transport | Kan jeg dele et hotelværelse med en anden deltager?",
           "count": 1
         }
       ],
       "scroll": [
         {
           "label": "Scrollhændelser (uden dybde)",
-          "count": 9
+          "count": 29
         }
       ]
+    },
+    {
+      "date": "2026-11-26",
+      "views": 0,
+      "visits": 0,
+      "visitors": 0,
+      "clicks": 0,
+      "section": [],
+      "faq": [],
+      "scroll": []
     }
   ]
 }
