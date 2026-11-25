@@ -1,7 +1,7 @@
 {
   "source": "matomo",
   "extractorVersion": 3,
-  "updatedAt": "2026-11-24T23:28:31.634Z",
+  "updatedAt": "2026-11-25T17:07:33.601Z",
   "days": [
     {
       "date": "2026-09-01",
@@ -4465,13 +4465,68 @@
     },
     {
       "date": "2026-11-25",
-      "views": 0,
-      "visits": 0,
-      "visitors": 0,
+      "views": 6,
+      "visits": 4,
+      "visitors": 4,
       "clicks": 0,
-      "section": [],
-      "faq": [],
-      "scroll": []
+      "section": [
+        {
+          "label": "Sektionsklik (uden sektionsnavn)",
+          "count": 1
+        }
+      ],
+      "faq": [
+        {
+          "label": "transport | Hvilke udgifter kan jeg få refunderet?",
+          "count": 2
+        },
+        {
+          "label": "transport | Hvordan booker jeg overnatning?",
+          "count": 2
+        },
+        {
+          "label": "transport | Hvordan kommer jeg til generalforsamlingen?",
+          "count": 2
+        },
+        {
+          "label": "mad | Er der mad og drikke til generalforsamlingen?",
+          "count": 1
+        },
+        {
+          "label": "personvalg | Hvor meget tid kræver det?",
+          "count": 1
+        },
+        {
+          "label": "program | Hvordan får jeg teknisk hjælp?",
+          "count": 1
+        },
+        {
+          "label": "program | Hvor finder jeg program og mødemateriale?",
+          "count": 1
+        },
+        {
+          "label": "program | Skal jeg bruge en app under generalforsamlingen?",
+          "count": 1
+        },
+        {
+          "label": "tilmelding | Hvordan kan jeg deltage, hvis de fysiske pladser bliver udsolgt?",
+          "count": 1
+        },
+        {
+          "label": "tilmelding | Hvordan kan jeg deltage i generalforsamlingen?",
+          "count": 1
+        },
+        {
+          "label": "tilmelding | Hvornår er der sidste frist for tilmelding og ændringer?",
+          "count": 1
+        }
+      ],
+      "scroll": [
+        {
+          "label": "Scrollhændelser (uden dybde)",
+          "count": 9
+        }
+      ]
     }
   ]
 }
