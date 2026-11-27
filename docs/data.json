@@ -1,7 +1,7 @@
 {
   "source": "matomo",
   "extractorVersion": 3,
-  "updatedAt": "2026-11-26T22:58:56.461Z",
+  "updatedAt": "2026-11-27T16:33:45.076Z",
   "days": [
     {
       "date": "2026-09-01",
@@ -4634,6 +4634,51 @@
         },
         {
           "label": "transport | Kan jeg dele et hotelværelse med en anden deltager?",
+          "count": 1
+        }
+      ],
+      "scroll": [
+        {
+          "label": "Scrollhændelser (uden dybde)",
+          "count": 4
+        }
+      ]
+    },
+    {
+      "date": "2026-11-27",
+      "views": 5,
+      "visits": 4,
+      "visitors": 4,
+      "clicks": 0,
+      "section": [
+        {
+          "label": "Sektionsklik (uden sektionsnavn)",
+          "count": 1
+        }
+      ],
+      "faq": [
+        {
+          "label": "tid | Hvad koster det at deltage?",
+          "count": 2
+        },
+        {
+          "label": "tid | Hvornår begynder generalforsamlingen?",
+          "count": 2
+        },
+        {
+          "label": "tid | Hvornår og hvor holdes generalforsamlingen GF27?",
+          "count": 2
+        },
+        {
+          "label": "program | Hvor finder jeg program og mødemateriale?",
+          "count": 1
+        },
+        {
+          "label": "tilmelding | Hvem kan deltage?",
+          "count": 1
+        },
+        {
+          "label": "tilmelding | Hvordan kan jeg deltage i generalforsamlingen?",
           "count": 1
         }
       ],
